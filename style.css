@@ -684,13 +684,24 @@ ul {
 }
 
 /* Footer */
+/* Footer */
 footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     padding: 3rem;
     background: #000;
     color: #666;
     margin-top: 5rem;
     font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+    width: 100%;
 }
 
 /* Animations Keyframes */
@@ -779,11 +790,12 @@ footer {
 
     section h2 {
         font-size: 1.8rem;
+        margin-bottom: 1.5rem;
     }
 }
 
-/* Motorola Edge 50 Pro Optimization (6.7", ~412px viewport) */
-@media (max-width: 480px) {
+/* Mobile & Tablet Optimization */
+@media (max-width: 1024px) {
     body {
         padding-top: 65px;
     }
@@ -807,81 +819,142 @@ footer {
     }
 
     header {
-        padding: 1.5rem 1rem;
+        padding: 3rem 1rem;
     }
 
     .profile-photo {
-        width: 140px;
-        height: 140px;
+        width: 200px;
+        height: 200px;
     }
 
     .firma {
-        font-size: 1.5rem;
+        font-size: 2rem;
         line-height: 1.2;
     }
 
     header h2 {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
     }
 
     .header-tagline {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
     }
 
     section {
-        margin: 2.5rem auto;
-        padding: 0 1rem;
+        margin: 3rem auto;
+        padding: 0 1.5rem;
     }
 
+    /* Fix Section Titles Spacing */
     section h2 {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Standardize Section Separators on Mobile */
+    section h2::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 4px;
+        margin: 10px auto 0;
+        background: var(--accent-green);
+        border: none;
     }
 
     .chi-sono-text {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
 
     .edu-item,
     .job-item {
-        padding: 1rem;
+        padding: 1.2rem;
     }
 
     .project-card {
-        padding: 1.25rem;
+        padding: 1.5rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 
     .project-card h3 {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .project-card p {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+    }
+
+    /* Stack Competenze/Certificazioni */
+    .competenze-container,
+    .certificazioni-container {
+        gap: 1.5rem;
+        flex-direction: column;
+        align-items: stretch;
     }
 
     .comp-item,
     .cert-item {
-        padding: 0.6rem 0.9rem;
-        font-size: 0.85rem;
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
     }
 
+    /* Mobile Tooltips Style */
     .comp-tooltip,
     .cert-tooltip {
-        width: 260px;
-        font-size: 0.8rem;
+        width: 280px;
+        font-size: 0.85rem;
         padding: 1rem;
-    }
-
-    .competenze-container,
-    .certificazioni-container {
-        gap: 1rem;
+        bottom: 110%;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        white-space: normal;
+        position: absolute;
     }
 
     #contatti p {
-        font-size: 0.95rem;
+        font-size: 1rem;
     }
 
+    /* Footer Fix */
     footer {
-        padding: 1.5rem 1rem;
-        font-size: 0.8rem;
+        padding: 3rem 1rem;
+        font-size: 0.9rem;
+        margin-top: 4rem;
+        background: #000;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    footer p {
+        margin: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* DISABLE hover animations on mobile for static cards and profile photo */
+    .edu-item:hover,
+    .job-item:hover,
+    .project-card:hover,
+    .edu-item:active,
+    .job-item:active,
+    .project-card:active,
+    .profile-photo:hover,
+    .profile-photo:active {
+        transform: none !important;
+        box-shadow: var(--shadow-soft) !important;
+        background: var(--card-bg) !important;
+        border-color: rgba(134, 194, 130, 0.4) !important;
+        transition: none !important;
     }
 }
