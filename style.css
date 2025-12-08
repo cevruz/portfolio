@@ -19,6 +19,17 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -26,7 +37,6 @@ body {
     line-height: 1.6;
     background-color: var(--bg-color);
     color: var(--text-primary);
-    overflow-x: hidden;
     padding-top: 80px;
     /* Space for sticky nav */
 }
@@ -43,16 +53,17 @@ body {
     transform: translateY(0);
 }
 
-/* 2. NAVBAR MODERNA */
+/* 2. NAVBAR MODERNA - Glassmorphism */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 80px;
-    background: var(--nav-bg);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -74,9 +85,10 @@ body {
 }
 
 .logo {
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Crimson Pro', serif;
     font-size: 2.2rem;
-    font-weight: 400;
+    font-weight: 500;
+    font-style: italic;
     color: var(--accent-green);
     letter-spacing: 1px;
     transition: var(--transition);
@@ -166,6 +178,9 @@ body {
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
+    position: relative;
+    width: 25px;
+    height: 20px;
 }
 
 .bar {
@@ -187,14 +202,34 @@ header {
     margin-bottom: 4rem;
 }
 
-/* Firma animata */
+/* Firma animata con shimmer */
 .firma {
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Crimson Pro', serif;
     font-size: 3rem;
-    color: #111111;
+    font-weight: 500;
     text-align: center;
     margin-bottom: 20px;
-    animation: fadeInDown 0.7s ease forwards;
+    background: linear-gradient(90deg,
+            #111111 0%,
+            #333333 25%,
+            #555555 50%,
+            #333333 75%,
+            #111111 100%);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientMove 3s linear infinite, fadeInDown 0.7s ease forwards;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 200% center;
+    }
+
+    100% {
+        background-position: 0% center;
+    }
 }
 
 
@@ -271,10 +306,40 @@ header p {
     animation: fadeInUp 0.6s ease 0.25s forwards;
 }
 
-/* Profile Photo */
+/* Profile Photo with Green Glow */
 .profile-photo-container {
     margin-bottom: 2rem;
     display: inline-block;
+    position: relative;
+}
+
+.profile-photo-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 110%;
+    height: 110%;
+    background: radial-gradient(circle, rgba(166, 227, 161, 0.4) 0%, transparent 70%);
+    filter: blur(20px);
+    border-radius: 50%;
+    z-index: -1;
+    animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        opacity: 0.6;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
 }
 
 .profile-photo {
@@ -347,6 +412,11 @@ li {
     line-height: 1.7;
 }
 
+/* Accent green on strong text */
+p strong {
+    color: var(--accent-green);
+}
+
 /* Chi Sono centered text */
 .chi-sono-text {
     text-align: center;
@@ -413,7 +483,7 @@ ul {
 }
 
 .project-card:hover {
-    transform: translateY(-12px) scale(1.02);
+    transform: translateY(-12px) scale(1.02) rotateX(3deg);
     box-shadow:
         0 20px 40px rgba(0, 0, 0, 0.3),
         0 0 20px rgba(166, 227, 161, 0.2);
@@ -600,13 +670,17 @@ ul {
 }
 
 #contatti a {
-    color: var(--accent-green);
-    text-decoration: none;
+    color: #7dd97d;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
     font-weight: bold;
+    transition: var(--transition);
 }
 
 #contatti a:hover {
-    text-decoration: underline;
+    color: #fff;
+    text-decoration-color: var(--accent-green);
 }
 
 /* Footer */
@@ -644,6 +718,21 @@ footer {
 
     .hamburger {
         display: flex;
+    }
+
+    /* Hamburger to Down Arrow - Hide bars, show arrow */
+    .hamburger.toggle .bar {
+        opacity: 0;
+    }
+
+    .hamburger.toggle::after {
+        content: '▼';
+        position: absolute;
+        font-size: 18px;
+        color: var(--text-primary);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .nav-links {
@@ -690,5 +779,109 @@ footer {
 
     section h2 {
         font-size: 1.8rem;
+    }
+}
+
+/* Motorola Edge 50 Pro Optimization (6.7", ~412px viewport) */
+@media (max-width: 480px) {
+    body {
+        padding-top: 65px;
+    }
+
+    .navbar {
+        height: 65px;
+        padding: 0 1rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        top: 65px;
+        gap: 1.5rem;
+    }
+
+    .nav-links li a {
+        font-size: 1.2rem;
+    }
+
+    header {
+        padding: 1.5rem 1rem;
+    }
+
+    .profile-photo {
+        width: 140px;
+        height: 140px;
+    }
+
+    .firma {
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
+
+    header h2 {
+        font-size: 0.9rem;
+    }
+
+    .header-tagline {
+        font-size: 0.85rem;
+    }
+
+    section {
+        margin: 2.5rem auto;
+        padding: 0 1rem;
+    }
+
+    section h2 {
+        font-size: 1.4rem;
+    }
+
+    .chi-sono-text {
+        font-size: 0.9rem;
+    }
+
+    .edu-item,
+    .job-item {
+        padding: 1rem;
+    }
+
+    .project-card {
+        padding: 1.25rem;
+    }
+
+    .project-card h3 {
+        font-size: 1rem;
+    }
+
+    .project-card p {
+        font-size: 0.9rem;
+    }
+
+    .comp-item,
+    .cert-item {
+        padding: 0.6rem 0.9rem;
+        font-size: 0.85rem;
+    }
+
+    .comp-tooltip,
+    .cert-tooltip {
+        width: 260px;
+        font-size: 0.8rem;
+        padding: 1rem;
+    }
+
+    .competenze-container,
+    .certificazioni-container {
+        gap: 1rem;
+    }
+
+    #contatti p {
+        font-size: 0.95rem;
+    }
+
+    footer {
+        padding: 1.5rem 1rem;
+        font-size: 0.8rem;
     }
 }
