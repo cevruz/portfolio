@@ -4,13 +4,13 @@
     --card-bg: #1E1E1E;
     --text-primary: #EEEEEE;
     --text-secondary: #CCCCCC;
-    --accent-green: #A6E3A1;
-    /* Renewable Green */
+    --accent-green: #86C282;
+    /* Premium Sage Green */
     --text-dark: #111111;
 
     --nav-bg: rgba(0, 0, 0, 0.6);
     --shadow-soft: 0 4px 10px rgba(0, 0, 0, 0.3);
-    --shadow-hover: 0 10px 20px rgba(166, 227, 161, 0.15);
+    --shadow-hover: 0 10px 20px rgba(134, 194, 130, 0.15);
     /* Greenish glow */
     --transition: all 0.35s ease;
 }
@@ -96,7 +96,7 @@ body {
 }
 
 .logo:hover {
-    text-shadow: 0 0 10px rgba(166, 227, 161, 0.5);
+    text-shadow: 0 0 10px rgba(134, 194, 130, 0.5);
 }
 
 .logo-tooltip {
@@ -321,7 +321,7 @@ header p {
     transform: translate(-50%, -50%);
     width: 110%;
     height: 110%;
-    background: radial-gradient(circle, rgba(166, 227, 161, 0.4) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(134, 194, 130, 0.4) 0%, transparent 70%);
     filter: blur(20px);
     border-radius: 50%;
     z-index: -1;
@@ -486,7 +486,7 @@ ul {
     transform: translateY(-12px) scale(1.02) rotateX(3deg);
     box-shadow:
         0 20px 40px rgba(0, 0, 0, 0.3),
-        0 0 20px rgba(166, 227, 161, 0.2);
+        0 0 20px rgba(134, 194, 130, 0.2);
     border-color: var(--accent-green);
 }
 
@@ -505,18 +505,18 @@ ul {
     background: var(--card-bg);
     padding: 1rem 1.5rem;
     border-radius: 25px;
-    border: 2px solid rgba(166, 227, 161, 0.4);
+    border: 2px solid rgba(134, 194, 130, 0.4);
     cursor: help;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .comp-item:hover {
-    background: rgba(166, 227, 161, 0.15);
+    background: rgba(134, 194, 130, 0.15);
     transform: translateY(-5px) scale(1.03);
     box-shadow:
         0 15px 35px rgba(0, 0, 0, 0.3),
-        0 0 15px rgba(166, 227, 161, 0.3);
+        0 0 15px rgba(134, 194, 130, 0.3);
     border-color: var(--accent-green);
 }
 
@@ -541,7 +541,7 @@ ul {
     border: 2px solid var(--accent-green);
     box-shadow:
         0 15px 40px rgba(0, 0, 0, 0.5),
-        0 0 20px rgba(166, 227, 161, 0.15);
+        0 0 20px rgba(134, 194, 130, 0.15);
     z-index: 100;
     width: 320px;
     max-width: 90vw;
@@ -584,18 +584,18 @@ ul {
     background: var(--card-bg);
     padding: 1rem 1.5rem;
     border-radius: 25px;
-    border: 2px solid rgba(166, 227, 161, 0.4);
+    border: 2px solid rgba(134, 194, 130, 0.4);
     cursor: help;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .cert-item:hover {
-    background: rgba(166, 227, 161, 0.15);
+    background: rgba(134, 194, 130, 0.15);
     transform: translateY(-5px) scale(1.03);
     box-shadow:
         0 15px 35px rgba(0, 0, 0, 0.3),
-        0 0 15px rgba(166, 227, 161, 0.3);
+        0 0 15px rgba(134, 194, 130, 0.3);
     border-color: var(--accent-green);
 }
 
@@ -620,7 +620,7 @@ ul {
     border: 2px solid var(--accent-green);
     box-shadow:
         0 15px 40px rgba(0, 0, 0, 0.5),
-        0 0 20px rgba(166, 227, 161, 0.15);
+        0 0 20px rgba(134, 194, 130, 0.15);
     z-index: 100;
     width: 320px;
     max-width: 90vw;
@@ -670,7 +670,7 @@ ul {
 }
 
 #contatti a {
-    color: #7dd97d;
+    color: #86C282;
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 3px;
