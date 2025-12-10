@@ -1,33 +1,39 @@
-# Portfolio di Ciro Luca Cozzolino
+# Portfolio di Ciro Luca Cozzolino (v3)
 
-Portfolio personale online con design moderno, tema scuro e animazioni.
+Portfolio personale ingegneristico con design moderno, multilingua e supporto PDF.
+
+## 🌟 Nuove Funzionalità (v3)
+
+- **Multilingua**: Supporto completo Italiano/Inglese con toggle istantaneo.
+- **Gestione Assets**: PDF dei progetti e CV organizzati centralmente in `assets/`.
+- **Responsive Avanzato**: Menu hamburger ottimizzato per tablet e mobile landscape.
+- **Bug Fixes**: Correzioni visive su navbar, footer e layout mobile.
 
 ## 🛠️ Branch Workflow
 
 | Branch | Scopo |
 |--------|-------|
-| `main` | Versione stabile e approvata |
-| `ai-dev` | Branch di sviluppo con AI coding agent |
+| `main` | Versione stabile di produzione (v3.0) |
+| `ai-dev` | Branch di sviluppo continuo |
 
 ## 🎨 Tecnologie
 
-- HTML5, CSS3, JavaScript
-- Google Fonts (Inter, Great Vibes)
-- Tema scuro moderno (#111, #A6E3A1)
-- Animazioni CSS e scroll reveal
+- **Frontend**: HTML5, CSS3 (Variables, Flexbox, Grid), JavaScript (ES6+)
+- **Design**: Glassmorphism, Dark Theme (#111, #86C282 - Sage Green)
+- **Features**: i18n Engine custom, Scroll Reveal, Tooltips
 
 ## 📁 Struttura
 
 ```
 project/
-├── index.html      # Struttura pagina
-├── style.css       # Stili e animazioni
-├── script.js       # Interattività
-└── images/         # Immagini
+├── assets/         # PDF (Tesi, CV, Progetti)
+├── images/         # Immagini profilo e assets grafici
+├── index.html      # Markup semantico e contenuti
+├── style.css       # Stili, responsive design e animazioni
+└── script.js       # Logica i18n, interazioni e DOM
 ```
 
-## 🚀 Come usare
-
-1. Aprire `index.html` con Live Server
-2. Modifiche AI: lavorare su branch `ai-dev`
-3. Quando soddisfatti: merge in `main`
+## 🚀 Versioning
+- **v1**: Release iniziale (Dark theme)
+- **v2**: Mobile polish e animazioni
+- **v3**: Multi-language support & Asset management
