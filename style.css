@@ -86,7 +86,7 @@ body {
 
 .logo {
     font-family: 'Crimson Pro', serif;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: 500;
     font-style: italic;
     color: var(--accent-green);
@@ -170,6 +170,32 @@ body {
 
 .nav-links li a:hover {
     color: var(--accent-green);
+}
+
+/* Language Toggle */
+#lang-toggle {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-primary);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 15px;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#lang-toggle:hover {
+    border-color: var(--accent-green);
+    color: var(--accent-green);
+}
+
+.lang-text {
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
 }
 
 /* Hamburger */
@@ -683,6 +709,32 @@ ul {
     text-decoration-color: var(--accent-green);
 }
 
+/* Button CV Style */
+.btn-cv {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent-green);
+    border: 2px solid var(--accent-green);
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-cv:hover {
+    background: var(--accent-green);
+    color: var(--text-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(134, 194, 130, 0.3);
+}
+
+.btn-cv:active {
+    transform: translateY(-1px);
+}
+
+
 /* Footer */
 /* Footer */
 footer {
@@ -718,13 +770,14 @@ footer p {
 }
 
 /* 6. RESPONSIVE DESIGN */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     body {
         padding-top: 70px;
     }
 
     .navbar {
         height: 70px;
+        padding: 0 1.5rem;
     }
 
     .hamburger {
@@ -774,13 +827,12 @@ footer p {
         padding: 4rem 1.5rem;
     }
 
-    header h1 {
-        font-size: 2.2rem;
+    .logo {
+        font-size: 1.6rem;
     }
 
     .projects-grid {
         grid-template-columns: 1fr;
-        /* 1 colonna su mobile */
     }
 
     section {
@@ -791,100 +843,6 @@ footer p {
     section h2 {
         font-size: 1.8rem;
         margin-bottom: 1.5rem;
-    }
-}
-
-/* Mobile & Tablet Optimization */
-@media (max-width: 1024px) {
-    body {
-        padding-top: 65px;
-    }
-
-    .navbar {
-        height: 65px;
-        padding: 0 1rem;
-    }
-
-    .logo {
-        font-size: 1.5rem;
-    }
-
-    .nav-links {
-        top: 65px;
-        gap: 1.5rem;
-    }
-
-    .nav-links li a {
-        font-size: 1.2rem;
-    }
-
-    header {
-        padding: 3rem 1rem;
-    }
-
-    .profile-photo {
-        width: 200px;
-        height: 200px;
-    }
-
-    .firma {
-        font-size: 2rem;
-        line-height: 1.2;
-    }
-
-    header h2 {
-        font-size: 1.1rem;
-    }
-
-    .header-tagline {
-        font-size: 0.9rem;
-    }
-
-    section {
-        margin: 3rem auto;
-        padding: 0 1.5rem;
-    }
-
-    /* Fix Section Titles Spacing */
-    section h2 {
-        font-size: 1.8rem;
-        margin-bottom: 0.5rem;
-    }
-
-    /* Standardize Section Separators on Mobile */
-    section h2::after {
-        content: '';
-        display: block;
-        width: 60px;
-        height: 4px;
-        margin: 10px auto 0;
-        background: var(--accent-green);
-        border: none;
-    }
-
-    .chi-sono-text {
-        font-size: 0.95rem;
-    }
-
-    .edu-item,
-    .job-item {
-        padding: 1.2rem;
-    }
-
-    .project-card {
-        padding: 1.5rem;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .project-card h3 {
-        font-size: 1.1rem;
-    }
-
-    .project-card p {
-        font-size: 0.95rem;
     }
 
     /* Stack Competenze/Certificazioni */
@@ -903,7 +861,7 @@ footer p {
         font-size: 0.9rem;
     }
 
-    /* Mobile Tooltips Style */
+    /* Fix Tooltips on Mobile */
     .comp-tooltip,
     .cert-tooltip {
         width: 280px;
@@ -918,8 +876,15 @@ footer p {
         position: absolute;
     }
 
-    #contatti p {
-        font-size: 1rem;
+    /* Standardize Section Separators */
+    section h2::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 4px;
+        margin: 10px auto 0;
+        background: var(--accent-green);
+        border: none;
     }
 
     /* Footer Fix */
@@ -936,13 +901,7 @@ footer p {
         text-align: center;
     }
 
-    footer p {
-        margin: 0;
-        text-align: center;
-        width: 100%;
-    }
-
-    /* DISABLE hover animations on mobile for static cards and profile photo */
+    /* DISABLE hover animations on mobile */
     .edu-item:hover,
     .job-item:hover,
     .project-card:hover,

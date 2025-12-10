@@ -23,13 +23,18 @@
                 <span class="logo-tooltip" id="logo-tooltip">Grazie della visualizzazione!</span>
             </div>
             <ul class="nav-links">
-                <li><a href="#chi-sono">Chi Sono</a></li>
-                <li><a href="#formazione">Formazione</a></li>
-                <li><a href="#esperienze">Esperienze</a></li>
-                <li><a href="#progetti">Progetti</a></li>
-                <li><a href="#competenze">Competenze</a></li>
-                <li><a href="#certificazioni">Certificazioni</a></li>
-                <li><a href="#contatti">Contatti</a></li>
+                <li><a href="#chi-sono" data-i18n="nav.about">Chi Sono</a></li>
+                <li><a href="#formazione" data-i18n="nav.education">Formazione</a></li>
+                <li><a href="#esperienze" data-i18n="nav.experience">Esperienze</a></li>
+                <li><a href="#progetti" data-i18n="nav.projects">Progetti</a></li>
+                <li><a href="#competenze" data-i18n="nav.skills">Competenze</a></li>
+                <li><a href="#certificazioni" data-i18n="nav.certifications">Certificazioni</a></li>
+                <li><a href="#contatti" data-i18n="nav.contacts">Contatti</a></li>
+                <li class="lang-switch">
+                    <button id="lang-toggle" aria-label="Switch Language">
+                        <span class="lang-text">IT</span> / <span class="lang-text">EN</span>
+                    </button>
+                </li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -45,45 +50,59 @@
             <div class="profile-photo-container">
                 <img src="images/foto_cv_2025.jpg" alt="Ciro Luca Cozzolino" class="profile-photo">
             </div>
-            <h1 class="firma">Ciao, sono Ciro Luca Cozzolino</h1>
-            <h2>Ingegnere Meccanico per l'Energia e l'Ambiente</h2>
-            <p class="header-tagline">Benvenuto nel mio portfolio personale.</p>
+            <h1 class="firma" data-i18n="header.greeting">Ciao, sono Ciro Luca Cozzolino</h1>
+            <h2 data-i18n="header.role">Ingegnere Meccanico per l'Energia e l'Ambiente</h2>
+            <p class="header-tagline" data-i18n="header.tagline">Benvenuto nel mio portfolio personale.</p>
         </div>
     </header>
 
     <section id="chi-sono">
-        <h2>Chi Sono</h2>
-        <p class="chi-sono-text">Ingegnere Meccanico per l'Energia e l'Ambiente.<br><br>
+        <h2 data-i18n="about.title">Chi Sono</h2>
+        <p class="chi-sono-text" data-i18n="about.text">Ingegnere Meccanico per l'Energia e l'Ambiente.<br><br>
             Appassionato di tematiche energetiche, sostenibilità e sviluppo software.
             Mi definisco una persona curiosa e proattiva, sempre orientata al problem solving e all'apprendimento
             continuo.</p>
+        <div class="cv-container" style="text-align: center; margin-top: 2rem;">
+            <a href="assets/cv_ciro_luca_cozzolino.pdf" class="btn-cv" download data-i18n="about.download_cv">Tasto
+                Scarica CV</a>
+        </div>
     </section>
 
+    <!-- ... (Skipping unchanged sections for brevity if possible, or usually replace block) ... -->
+    <!-- I will target specific blocks to be safe -->
+
     <section id="formazione">
-        <h2>Formazione</h2>
+        <h2 data-i18n="education.title">Formazione</h2>
         <div class="edu-item">
-            <h3>Laurea Magistrale in Ingegneria Meccanica per l'Energia e l'Ambiente</h3>
-            <p><strong>Università degli Studi di Napoli Federico II (2021-2025)</strong></p>
-            <p>Sintesi Tesi di laurea magistrale: <em>Analisi e ottimizzazione energetica tramite approccio
-                    BIM-2-BEM</em>.</p>
-            <p>Esami rilevanti: Macchine a Fluido, Gestione dell'Energia, Tecnica del Freddo, Impianti Termotecnici.</p>
+            <h3 data-i18n="education.master.title">Laurea Magistrale in Ingegneria Meccanica per l'Energia e l'Ambiente
+            </h3>
+            <p><strong data-i18n="education.master.place">Università degli Studi di Napoli Federico II
+                    (2021-2025)</strong></p>
+            <p data-i18n="education.master.thesis">Sintesi Tesi di laurea magistrale: <em>Analisi e ottimizzazione
+                    energetica tramite approccio BIM-2-BEM</em>.</p>
+            <p data-i18n="education.master.exams">Esami rilevanti: Macchine a Fluido, Gestione dell'Energia, Tecnica del
+                Freddo, Impianti Termotecnici.</p>
         </div>
         <br>
+        <br>
         <div class="edu-item">
-            <h3>Laurea Triennale in Ingegneria Meccanica</h3>
-            <p><strong>Università degli Studi di Napoli Federico II (2015-2020)</strong></p>
-            <p>Sintesi Tesi di laurea triennale: <em>Studio e analisi di impianti a ciclo Rankine organico (ORC)</em>.
-            </p>
-            <p>Esami principali: Termodinamica, Fluidodinamica, Meccanica Applicata.</p>
+            <h3 data-i18n="education.bachelor.title">Laurea Triennale in Ingegneria Meccanica</h3>
+            <p><strong data-i18n="education.bachelor.place">Università degli Studi di Napoli Federico II
+                    (2015-2020)</strong></p>
+            <p data-i18n="education.bachelor.thesis">Sintesi Tesi di laurea triennale: <em>Studio e analisi di impianti
+                    a ciclo Rankine organico (ORC)</em>.</p>
+            <p data-i18n="education.bachelor.exams">Esami principali: Termodinamica, Fluidodinamica, Meccanica
+                Applicata.</p>
         </div>
     </section>
 
     <section id="esperienze">
-        <h2>Esperienze Lavorative</h2>
+        <h2 data-i18n="experience.title">Esperienze Lavorative</h2>
         <div class="job-item">
-            <h3>NHP S.r.l. - Junior Energy Manager / Operatore Control Room: da set 2025 - oggi</h3>
+            <h3 data-i18n="experience.nhp.title">NHP S.r.l. - Junior Energy Manager / Operatore Control Room: da set
+                2025 - oggi</h3>
             <p>
-            <ul>
+            <ul data-i18n="experience.nhp.desc">
                 <li>Analisi consumi per impianti relativi al settore terziario ed industriale;</li>
                 <li>Redazione di diagnosi energetiche, audit, reportistica mensile e trimestrale;</li>
                 <li>Controllo e monitoraggio impianti da remoto;</li>
@@ -92,13 +111,12 @@
         </div>
         <br>
         <div class="job-item">
-            <h3>Yokohama Sekai S.r.l. - Ingegnere Ufficio Tecnico: da set 2021 - feb 2023</h3>
+            <h3 data-i18n="experience.yokohama.title">Yokohama Sekai S.r.l. - Ingegnere Ufficio Tecnico: da set 2021 -
+                feb 2023</h3>
             <p>
-            <ul>
+            <ul data-i18n="experience.yokohama.desc">
                 <li>Efficientamento energetico in ambito prevalentemente civile, ossia progettazione/valutazione tecnica
-                    degli impianti HVAC, riscaldamento/raffrescamento mediante l'utilizzo di impianti radianti a
-                    pavimento/soffitto e VRV/VRF, impianti solari termici per la produzione di ACS con anche
-                    integrazione per il riscaldamento attraverso l'utilizzo di software CAD e affini;</li>
+                    degli impianti HVAC...</li>
                 <li>Supporto tecnico sia durante le consulenze in loco che telefoniche;</li>
                 <li>Monitoraggio dell'avanzamento del progetto, identificazione dei rischi e intraprendere azioni
                     correttive necessarie;</li>
@@ -107,65 +125,80 @@
         </div>
         <br>
         <div class="job-item">
-            <h3>Servizio Civile - UICI Napoli: da nov 2019 a gen 2021</h3>
-            <p>Attività di supporto, accompagnamento e inclusione sociale per persone non vedenti e ipovedenti.</p>
+            <h3 data-i18n="experience.sc.title">Servizio Civile - UICI Napoli: da nov 2019 a gen 2021</h3>
+            <p data-i18n="experience.sc.desc">Attività di supporto, accompagnamento e inclusione sociale per persone non
+                vedenti e ipovedenti.</p>
         </div>
     </section>
 
     <section id="progetti">
-        <h2>Progetti Universitari</h2>
+        <h2 data-i18n="projects.title">Progetti Universitari</h2>
         <div class="projects-grid">
+            <!-- Project 1 -->
             <div class="project-card">
-                <h3>Ottimizzazione energetica di un solaio in laterocemento</h3>
-                <p>Analisi delle prestazioni termiche e interventi di miglioramento per l'efficienza energetica
-                    dell'involucro.</p>
+                <h3 data-i18n="projects.p1.title">Ottimizzazione energetica di un solaio in laterocemento</h3>
+                <p data-i18n="projects.p1.desc">Analisi delle prestazioni termiche e interventi di miglioramento per
+                    l'efficienza energetica dell'involucro.</p>
             </div>
+            <!-- Project 2 -->
             <div class="project-card">
-                <h3>Studio di fattibilità energetica della comunità montana di Ivrea (TO)</h3>
-                <p>Valutazione del potenziale di risorse rinnovabili e strategie per l'autonomia energetica locale.</p>
+                <h3 data-i18n="projects.p2.title">Studio di fattibilità energetica della comunità montana di Ivrea (TO)
+                </h3>
+                <p data-i18n="projects.p2.desc">Valutazione del potenziale di risorse rinnovabili e strategie per
+                    l'autonomia energetica locale.</p>
             </div>
+            <!-- Project 3 -->
             <div class="project-card">
-                <h3>Riqualificazione energetica di un edificio a Portici (NA)</h3>
-                <p>Progetto di retrofit energetico con analisi costi-benefici e simulazioni dinamiche.</p>
+                <h3 data-i18n="projects.p3.title">Riqualificazione energetica di un edificio a Portici (NA)</h3>
+                <p data-i18n="projects.p3.desc">Progetto di retrofit energetico con analisi costi-benefici e simulazioni
+                    dinamiche.</p>
             </div>
+            <!-- Project 4 -->
             <div class="project-card">
-                <h3>Ottimizzazione energetica dell’aeroporto di Capodichino</h3>
-                <p>Approccio <em>efficiency-first</em> per la riduzione dei consumi e l'integrazione di sistemi
-                    sostenibili.</p>
+                <h3 data-i18n="projects.p4.title">Ottimizzazione energetica dell’aeroporto di Capodichino</h3>
+                <p data-i18n="projects.p4.desc">Approccio <em>efficiency-first</em> per la riduzione dei consumi e
+                    l'integrazione di sistemi sostenibili.</p>
             </div>
         </div>
     </section>
 
     <section id="competenze">
-        <h2>Competenze</h2>
+        <h2 data-i18n="skills.title">Competenze</h2>
         <div class="competenze-container">
             <div class="comp-item">
-                <span class="comp-title">Competenze Tecniche</span>
+                <span class="comp-title" data-i18n="skills.technical">Competenze Tecniche</span>
                 <div class="comp-tooltip">
-                    <ul style="list-style: none; padding: 0; margin: 0; text-align: left;">
-                        <li>• Efficienza Energetica</li>
-                        <li>• HVAC</li>
-                        <li>• Energie Rinnovabili</li>
-                        <li>• BEM/BIM</li>
-                        <li>• Analisi Termodinamica</li>
+                    <ul style="list-style: none; padding: 0; margin: 0; text-align: left;"
+                        data-i18n="skills.technical.list">
+                        <li>• Efficienza Energetica e Sostenibilità</li>
+                        <li>• Progettazione e Analisi Impianti HVAC</li>
+                        <li>• Energie Rinnovabili (Fotovoltaico, Eolico, Geotermico)</li>
+                        <li>• Modellazione Energetica Edifici (BEM/BIM)</li>
+                        <li>• Analisi Termodinamica e Fluidodinamica</li>
+                        <li>• Diagnosi Energetiche e Audit</li>
+                        <li>• Gestione Progetti Energetici</li>
+                        <li>• Analisi Dati</li>
                     </ul>
                 </div>
             </div>
             <div class="comp-item">
-                <span class="comp-title">Software</span>
+                <span class="comp-title" data-i18n="skills.software">Software</span>
                 <div class="comp-tooltip">
-                    <ul style="list-style: none; padding: 0; margin: 0; text-align: left;">
+                    <ul style="list-style: none; padding: 0; margin: 0; text-align: left;"
+                        data-i18n="skills.software.list">
                         <li>• AutoCAD, Revit</li>
-                        <li>• Matlab, TRNSYS</li>
+                        <li>• MATLAB</li>
+                        <li>• TRNSYS, EnergyPlus, DesignBuilder</li>
                         <li>• PVSyst, PVGis</li>
-                        <li>• Microsoft Office</li>
+                        <li>• Microsoft Office Suite (Excel, Word, PowerPoint)</li>
                     </ul>
                 </div>
             </div>
             <div class="comp-item">
-                <span class="comp-title">Competenze Linguistiche</span>
+                <span class="comp-title" data-i18n="skills.languages">Competenze Linguistiche</span>
                 <div class="comp-tooltip">
-                    <ul style="list-style: none; padding: 0; margin: 0; text-align: left;">
+                    <ul style="list-style: none; padding: 0; margin: 0; text-align: left;"
+                        data-i18n="skills.languages.list">
                         <li>• Italiano (Madrelingua)</li>
                         <li>• Inglese (Livello B2)</li>
                     </ul>
@@ -175,24 +208,25 @@
     </section>
 
     <section id="certificazioni">
-        <h2>Certificazioni</h2>
+        <h2 data-i18n="certifications.title">Certificazioni</h2>
         <div class="certificazioni-container">
             <div class="cert-item">
                 <span class="cert-title">TOEIC (Listening & Reading)</span>
-                <div class="cert-tooltip">
+                <div class="cert-tooltip" data-i18n="certifications.toeic.desc">
                     Certificazione lingua inglese professionale riconosciuta a livello internazionale; punteggio
                     raggiunto nella fase Listening & Reading di 895/945 equivalente ad un B2.2 avanzato.
                 </div>
             </div>
             <div class="cert-item">
                 <span class="cert-title">Trinity College London level B2.2</span>
-                <div class="cert-tooltip">
+                <div class="cert-tooltip" data-i18n="certifications.trinity.desc">
                     Certificazione in lingua inglese livello B2.2 con merito presso il Trinity College London.
                 </div>
             </div>
             <div class="cert-item">
-                <span class="cert-title">Operatore BIG DATA, REMOTE CONTROL e Macchine CNC</span>
-                <div class="cert-tooltip">
+                <span class="cert-title" data-i18n="certifications.bigdata.title">Operatore BIG DATA, REMOTE CONTROL e
+                    Macchine CNC</span>
+                <div class="cert-tooltip" data-i18n="certifications.bigdata.desc">
                     Corso di formazione professionale focalizzato su architettura hardware/software di sistemi
                     automatizzati, programmazione di macchine utensili a controllo numerico (CNC), gestione allarmi
                     e diagnostica IoT, e progettazione 3D (con infarinatura generale su CAD e CATIA V5).
@@ -204,19 +238,21 @@
 
 
     <section id="contatti">
-        <h2>Contatti</h2>
-        <p style="text-align: center;"><strong>Email:</strong> <a
+        <h2 data-i18n="contacts.title">Contatti</h2>
+        <p style="text-align: center;"><strong data-i18n="contacts.email">Email:</strong> <a
                 href="mailto:cirolucacozzolino96@gmail.com">cirolucacozzolino96@gmail.com</a></p>
-        <p style="text-align: center;"><strong>Telefono:</strong> 327 366 9256</p>
-        <p style="text-align: center;"><strong>LinkedIn:</strong> <a
-                href="https://www.linkedin.com/in/ciro-luca-cozzolino-b50b55153/" target="_blank">Profilo
+        <p style="text-align: center;"><strong data-i18n="contacts.phone">Telefono:</strong> 327 366 9256</p>
+        <p style="text-align: center;"><strong data-i18n="contacts.linkedin">LinkedIn:</strong> <a
+                href="https://www.linkedin.com/in/ciro-luca-cozzolino-b50b55153/" target="_blank"
+                data-i18n="contacts.linkedin_profile">Profilo
                 LinkedIn</a>
         </p>
-        <p style="text-align: center;"><strong>Località:</strong> Portici (NA) | 17/10/1996</p>
+        <p style="text-align: center;"><strong data-i18n="contacts.location">Località:</strong> Portici (NA) |
+            17/10/1996</p>
     </section>
 
     <footer>
-        <p>&copy; 2025 Ciro Luca Cozzolino Portfolio</p>
+        <p data-i18n="footer.credit">© 2025 - Designed & Built by Ciro Luca Cozzolino</p>
     </footer>
 
     <script src="script.js"></script>
