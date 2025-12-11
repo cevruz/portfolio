@@ -45,5 +45,3 @@ portfolio/
 - Education sections include bullet lists in both languages; use the language toggle to verify.
 - Mobile: open hamburger menu in landscape and ensure it scrolls smoothly; body scroll is locked while menu is open.
 
-If you want, I can add a short changelog file (`CHANGELOG.md`) and tidy the translations into separate JSON files.
-
