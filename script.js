@@ -19,19 +19,19 @@ document.addEventListener('DOMContentLoaded', () => {
             "about.text": "Ingegnere Meccanico per l'Energia e l'Ambiente.<br><br>Appassionato di tematiche energetiche, sostenibilità e sviluppo software. Mi definisco una persona curiosa e proattiva, sempre orientata al problem solving e all'apprendimento continuo.",
             "about.download_cv": "Scarica CV",
             "education.title": "Formazione",
-            "education.master.title": "Laurea Magistrale in Ingegneria Meccanica",
+            "education.master.title": "Laurea Magistrale in INGEGNERIA MECCANICA PER L'ENERGIA E L'AMBIENTE",
             "education.master.place": "Università degli Studi di Napoli Federico II (2021-2025)",
-            "education.master.thesis": "Sintesi Tesi: <em>Analisi e ottimizzazione energetica tramite approccio BIM-2-BEM</em>.",
-            "education.master.exams": "Esami rilevanti: Macchine a Fluido, Gestione dell'Energia, Tecnica del Freddo.",
-            "education.bachelor.title": "Laurea Triennale in Ingegneria Meccanica",
+            "education.master.thesis": "Sintesi tesi di laurea magistrale: <em>Analisi e ottimizzazione energetica tramite approccio BIM-2-BEM</em>.",
+            "education.master.exams": "<ul><li>Trasmissione del Calore</li><li>Termofluidodinamica delle Macchine</li><li>Energetica</li><li>Impianti di Generazione Termica</li><li>Impianti di Climatizzazione</li><li>Tecnologie Avanzate per l’Energia</li><li>Combustione</li><li>Tecniche e Modelli per la Refrigerazione</li><li>Energy Sustainability for Smart Transportations and Infrastructures</li><li>Sperimentazione e Impatto Ambientale delle Macchine</li></ul>",
+            "education.bachelor.title": "LAUREA TRIENNALE IN INGEGNERIA MECCANICA",
             "education.bachelor.place": "Università degli Studi di Napoli Federico II (2015-2020)",
-            "education.bachelor.thesis": "Sintesi Tesi: <em>Studio e analisi di impianti a ciclo Rankine organico (ORC)</em>.",
-            "education.bachelor.exams": "Esami principali: Termodinamica, Fluidodinamica, Meccanica Applicata.",
+            "education.bachelor.thesis": "Sintesi tesi di laurea triennale: <em>Studio e analisi di impianti a ciclo Rankine organico (ORC)</em>.",
+            "education.bachelor.exams": "<ul><li>Meccanica Applicata</li><li>Termodinamica</li><li>Scienza dei Materiali</li><li>Macchine a fluido</li><li>Tecnologie ed Impianti Meccanici</li><li>Elementi di informatica</li><li>Fisica generale</li></ul>",
             "experience.title": "Esperienze Lavorative",
-            "experience.nhp.title": "NHP S.r.l. - Junior Energy Manager: set 2025 - oggi",
+            "experience.nhp.title": "NHP S.r.l. - Junior Energy Manager / Operatore Control Room: set 2025 - oggi",
             "experience.nhp.desc": "<li>Analisi consumi per impianti terziari e industriali;</li><li>Redazione diagnosi energetiche e audit;</li><li>Controllo e monitoraggio impianti da remoto;</li>",
             "experience.yokohama.title": "Yokohama Sekai S.r.l. - Ingegnere Ufficio Tecnico: 2021 - 2023",
-            "experience.yokohama.desc": "<li>Efficientamento energetico civile (HVAC, VRV/VRF, solare termico);</li><li>Supporto tecnico in loco e da remoto;</li><li>Valutazione rischi e azioni correttive;</li>",
+            "experience.yokohama.desc": "<li>Efficientamento energetico civile (HVAC, VRV/VRF, solare termico);</li><li>Supporto tecnico in loco e da remoto;</li>",
             "experience.sc.title": "Servizio Civile - UICI Napoli: 2019 - 2021",
             "experience.sc.desc": "Attività di supporto e inclusione sociale per non vedenti e ipovedenti.",
             "projects.title": "Progetti Universitari",
@@ -87,12 +87,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "education.bachelor.title": "B.Sc. in Mechanical Engineering",
             "education.bachelor.place": "University of Naples Federico II (2015-2020)",
             "education.bachelor.thesis": "Thesis: <em>Study and analysis of Organic Rankine Cycle (ORC) plants</em>.",
-            "education.bachelor.exams": "Main exams: Thermodynamics, Fluid Dynamics, Applied Mechanics.",
+            "education.bachelor.exams": "<ul><li>Applied Mechanics</li><li>Thermodynamics</li><li>Materials Science</li><li>Fluid Machines</li><li>Mechanical Technologies & Systems</li><li>Computer Science Basics</li><li>General Physics</li></ul>",
+            "education.master.exams": "<ul><li>Heat Transfer</li><li>Thermofluid Dynamics of Machines</li><li>Energy Engineering</li><li>Thermal Power Plants</li><li>HVAC Systems</li><li>Advanced Energy Technologies</li><li>Combustion</li><li>Techniques & Models for Refrigeration</li><li>Energy Sustainability for Smart Transportations & Infrastructures</li><li>Experimental Methods & Environmental Impact of Machines</li></ul>",
             "experience.title": "Work Experience",
-            "experience.nhp.title": "NHP S.r.l. - Junior Energy Manager: Sep 2025 - Present",
+            "experience.nhp.title": "NHP S.r.l. - Junior Energy Manager / Control Room Operator: Sep 2025 - Present",
             "experience.nhp.desc": "<li>Energy consumption analysis for tertiary and industrial plants;</li><li>Drafting energy diagnoses and audits;</li><li>Remote plant control and monitoring;</li>",
             "experience.yokohama.title": "Yokohama Sekai S.r.l. - Technical Office Engineer: 2021 - 2023",
-            "experience.yokohama.desc": "<li>Civil energy efficiency (HVAC, VRV/VRF, thermal solar);</li><li>Technical support on-site and remote;</li><li>Risk assessment and corrective actions;</li>",
+            "experience.yokohama.desc": "<li>Civil energy efficiency (HVAC, VRV/VRF, thermal solar);</li><li>Technical support on-site and remote;</li>",
             "experience.sc.title": "Civil Service - UICI Napoli: 2019 - 2021",
             "experience.sc.desc": "Support and social inclusion activities for blind and visually impaired people.",
             "projects.title": "University Projects",
@@ -148,13 +149,14 @@ document.addEventListener('DOMContentLoaded', () => {
        ========================================= */
     let currentLang = localStorage.getItem('lang') || 'it';
     const langToggleBtn = document.getElementById('lang-toggle');
+    const langLabel = document.getElementById('lang-label');
 
     function updateLanguage(lang) {
         document.querySelectorAll('[data-i18n]').forEach(element => {
             const key = element.getAttribute('data-i18n');
             if (translations[lang][key]) {
                 // If it's a list or complex HTML, use innerHTML
-                if (key.includes('list') || key.includes('text') || key.includes('desc') || key.includes('thesis') || key.includes('credit')) {
+                if (key.includes('list') || key.includes('text') || key.includes('desc') || key.includes('thesis') || key.includes('credit') || key.includes('exams')) {
                     element.innerHTML = translations[lang][key];
                 } else {
                     element.textContent = translations[lang][key];
@@ -164,6 +166,11 @@ document.addEventListener('DOMContentLoaded', () => {
         currentLang = lang;
         localStorage.setItem('lang', lang);
 
+        // Update the visible language label to indicate the target language
+        if (langLabel) {
+            langLabel.textContent = lang === 'it' ? 'EN' : 'IT';
+        }
+
         // Update CV Button Link based on language (Optional: if we had an EN CV)
         // For now, keep the same PDF but maybe change text
     }
@@ -171,9 +178,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize Language
     updateLanguage(currentLang);
 
-    langToggleBtn.addEventListener('click', () => {
+    function doHaptic(duration = 10) {
+        try {
+            if (navigator.vibrate) navigator.vibrate(duration);
+        } catch (e) {
+            // ignore
+        }
+    }
+
+    // Add tactile + visual feedback when toggling language
+    langToggleBtn.addEventListener('click', (ev) => {
+        doHaptic(10);
+        langToggleBtn.classList.add('pressed');
+        setTimeout(() => langToggleBtn.classList.remove('pressed'), 160);
         const newLang = currentLang === 'it' ? 'en' : 'it';
         updateLanguage(newLang);
+    });
+
+    // Also trigger haptic feedback on touchstart/pointerdown for immediacy
+    ['touchstart', 'pointerdown'].forEach(evt => {
+        langToggleBtn.addEventListener(evt, () => doHaptic(8), {passive: true});
     });
 
 
@@ -189,12 +213,19 @@ document.addEventListener('DOMContentLoaded', () => {
     hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('active');
         hamburger.classList.toggle('toggle');
+        // Lock body scroll when nav is open to avoid background scrolling issues on mobile
+        if (navLinks.classList.contains('active')) {
+            document.body.classList.add('nav-open');
+        } else {
+            document.body.classList.remove('nav-open');
+        }
     });
 
     links.forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
             hamburger.classList.remove('toggle');
+            document.body.classList.remove('nav-open');
         });
     });
 

@@ -1,0 +1,13 @@
+{
+  "name": "portfolio-v4-optimizer",
+  "version": "1.0.0",
+  "description": "Image optimization scripts for Portfolio v4",
+  "main": "optimize.js",
+  "scripts": {
+    "optimize": "node optimize.js"
+  },
+  "dependencies": {
+    "pdf-parse": "^2.4.5",
+    "sharp": "^0.33.2"
+  }
+}
