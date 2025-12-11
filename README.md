@@ -1,39 +1,49 @@
-# Portfolio di Ciro Luca Cozzolino (v3)
+# Portfolio di Ciro Luca Cozzolino
 
 Portfolio personale ingegneristico con design moderno, multilingua e supporto PDF.
 
-## 🌟 Nuove Funzionalità (v3)
+## 🌟 Release v4 — Highlights
 
-- **Multilingua**: Supporto completo Italiano/Inglese con toggle istantaneo.
-- **Gestione Assets**: PDF dei progetti e CV organizzati centralmente in `assets/`.
-- **Responsive Avanzato**: Menu hamburger ottimizzato per tablet e mobile landscape.
-- **Bug Fixes**: Correzioni visive su navbar, footer e layout mobile.
+- Mobile: fixed mobile navbar, scrollable hamburger menu in landscape, reduced mobile font-size
+- UX: tactile (vibration) + visual feedback on language toggle
+- I18n: content updates (education, experiences) with Italian/English bullet lists
+- Images: responsive WebP/JPEG variants and `<picture>` markup for conditional loading
+- Dev: `optimize.js` script to generate 320/640/1024 variants using `sharp`
 
-## 🛠️ Branch Workflow
+## 🛠 Branch & Release
 
-| Branch | Scopo |
-|--------|-------|
-| `main` | Versione stabile di produzione (v3.0) |
-| `ai-dev` | Branch di sviluppo continuo |
+- `main` — production (tagged `v4`)
+- `ai-dev` — active development (current work)
 
-## 🎨 Tecnologie
+## 🎯 Quick Start
 
-- **Frontend**: HTML5, CSS3 (Variables, Flexbox, Grid), JavaScript (ES6+)
-- **Design**: Glassmorphism, Dark Theme (#111, #86C282 - Sage Green)
-- **Features**: i18n Engine custom, Scroll Reveal, Tooltips
+Install dependencies and generate responsive images:
 
-## 📁 Struttura
+```bash
+npm install
+npm run optimize
+```
+
+Then open `index.html` in a browser (use Chrome DevTools device toolbar to test mobile + landscape).
+
+## 📁 Project Structure (selected)
 
 ```
-project/
+portfolio/
 ├── assets/         # PDF (Tesi, CV, Progetti)
-├── images/         # Immagini profilo e assets grafici
-├── index.html      # Markup semantico e contenuti
-├── style.css       # Stili, responsive design e animazioni
-└── script.js       # Logica i18n, interazioni e DOM
+├── images/         # Responsive image variants (generated)
+├── index.html      # Markup and picture elements
+├── style.css       # All styles and responsive rules
+├── script.js       # i18n, UI interactions
+├── optimize.js     # Image generation script (sharp)
+└── extract_cv.js   # Helper (extract text from CV PDF)
 ```
 
-## 🚀 Versioning
-- **v1**: Release iniziale (Dark theme)
-- **v2**: Mobile polish e animazioni
-- **v3**: Multi-language support & Asset management
+## ✅ Notes & Testing
+
+- Language toggle shows the *target* language (EN when page is IT, and viceversa).
+- Education sections include bullet lists in both languages; use the language toggle to verify.
+- Mobile: open hamburger menu in landscape and ensure it scrolls smoothly; body scroll is locked while menu is open.
+
+If you want, I can add a short changelog file (`CHANGELOG.md`) and tidy the translations into separate JSON files.
+
