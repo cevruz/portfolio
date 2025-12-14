@@ -15,6 +15,20 @@
     --transition: all 0.35s ease;
 }
 
+/* Light Mode Variables */
+body.light-mode {
+    --bg-color: #F0F2F5;
+    --card-bg: #FFFFFF;
+    --text-primary: #1C1E21;
+    --text-secondary: #5A5A5A;
+    --accent-green: #4A9345; /* A slightly darker green for better contrast on light bg */
+    --text-dark: #FFFFFF; /* White text for on green elements */
+
+    --nav-bg: rgba(255, 255, 255, 0.6);
+    --shadow-soft: 0 4px 10px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 10px 20px rgba(74, 147, 69, 0.15);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -208,6 +222,61 @@ body {
     letter-spacing: 1px;
 }
 
+/* Theme Toggle Button */
+.theme-toggle-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-primary);
+    cursor: pointer;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-toggle-btn:hover {
+    border-color: var(--accent-green);
+    color: var(--accent-green);
+}
+
+.theme-toggle-btn svg {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.sun-icon {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.moon-icon {
+    opacity: 0;
+    transform: translateY(20px) scale(0.5);
+}
+
+/* Light mode icon states */
+.light-mode .sun-icon {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.5);
+}
+
+.light-mode .moon-icon {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Light mode specific border color */
+.light-mode .theme-toggle-btn {
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
 /* Hamburger */
 .hamburger {
     display: none;
@@ -218,6 +287,22 @@ body {
     width: 25px;
     height: 20px;
         z-index: 1300;
+}
+
+/* Specific overrides for light mode */
+.light-mode .navbar {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .firma {
+    background: linear-gradient(90deg, #1C1E21 0%, #4A4A4A 25%, #6E6E6E 50%, #4A4A4A 75%, #1C1E21 100%);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.light-mode .project-card {
+    border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .bar {

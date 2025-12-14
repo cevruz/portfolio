@@ -269,4 +269,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     console.log("Portfolio v2.0 Loaded: i18n + Modals active.");
+
+    /* =========================================
+       4. THEME (DARK/LIGHT MODE) LOGIC
+       ========================================= */
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Function to apply the saved theme
+    const applyTheme = (theme) => {
+        if (theme === 'light') {
+            body.classList.add('light-mode');
+        } else {
+            body.classList.remove('light-mode');
+        }
+    };
+
+    // Check for saved theme in localStorage
+    const savedTheme = localStorage.getItem('theme') || 'dark'; // Default to dark
+    applyTheme(savedTheme);
+
+    // Event listener for the theme toggle button
+    themeToggleBtn.addEventListener('click', () => {
+        const currentTheme = body.classList.contains('light-mode') ? 'light' : 'dark';
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+        applyTheme(newTheme);
+        localStorage.setItem('theme', newTheme);
+
+        // Haptic feedback for theme switch
+        doHaptic(12);
+    });
 });
