@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "nav.skills": "Competenze",
             "nav.certifications": "Certificazioni",
             "nav.contacts": "Contatti",
-            "header.greeting": "Ciao, sono Ciro Luca Cozzolino",
+            "header.greeting": "Ciao, sono Ciro Luca Cozzolino!",
             "header.role": "Ingegnere Meccanico per l'Energia e l'Ambiente",
             "header.tagline": "Benvenuto nel mio portfolio personale.",
             "about.title": "Chi Sono",
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "nav.skills": "Skills",
             "nav.certifications": "Certifications",
             "nav.contacts": "Contacts",
-            "header.greeting": "Hi, I'm Ciro Luca Cozzolino",
+            "header.greeting": "Hi, I'm Ciro Luca Cozzolino!",
             "header.role": "Mechanical Engineer for Energy & Environment",
             "header.tagline": "Welcome to my personal portfolio.",
             "about.title": "About Me",
@@ -198,6 +198,47 @@ document.addEventListener('DOMContentLoaded', () => {
     // Also trigger haptic feedback on touchstart/pointerdown for immediacy
     ['touchstart', 'pointerdown'].forEach(evt => {
         langToggleBtn.addEventListener(evt, () => doHaptic(8), {passive: true});
+    });
+
+    // Theme Toggle (Dark/Light Mode)
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeIconMoon = document.getElementById('theme-icon-moon');
+    const themeIconSun = document.getElementById('theme-icon-sun');
+    let isDarkMode = localStorage.getItem('theme') === 'light' ? false : true;
+
+    // Apply saved theme on page load
+    if (!isDarkMode) {
+        document.body.classList.add('light-mode');
+        themeIconMoon.style.display = 'block';  // Luna quando light mode
+        themeIconSun.style.display = 'none';
+    } else {
+        document.body.classList.remove('light-mode');
+        themeIconSun.style.display = 'block';   // Sole quando dark mode
+        themeIconMoon.style.display = 'none';
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+        doHaptic(10);
+        themeToggleBtn.classList.add('pressed');
+        setTimeout(() => themeToggleBtn.classList.remove('pressed'), 160);
+        
+        isDarkMode = !isDarkMode;
+        if (isDarkMode) {
+            document.body.classList.remove('light-mode');
+            themeIconSun.style.display = 'block';   // Sole in dark mode
+            themeIconMoon.style.display = 'none';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.body.classList.add('light-mode');
+            themeIconMoon.style.display = 'block';  // Luna in light mode
+            themeIconSun.style.display = 'none';
+            localStorage.setItem('theme', 'light');
+        }
+    });
+
+    // Also trigger haptic on theme toggle touchstart
+    ['touchstart', 'pointerdown'].forEach(evt => {
+        themeToggleBtn.addEventListener(evt, () => doHaptic(8), {passive: true});
     });
 
 
