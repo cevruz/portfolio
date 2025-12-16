@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Also trigger haptic feedback on touchstart/pointerdown for immediacy
     ['touchstart', 'pointerdown'].forEach(evt => {
-        langToggleBtn.addEventListener(evt, () => doHaptic(8), {passive: true});
+        langToggleBtn.addEventListener(evt, () => doHaptic(8), { passive: true });
     });
 
     // Theme Toggle (Dark/Light Mode)
@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
         doHaptic(10);
         themeToggleBtn.classList.add('pressed');
         setTimeout(() => themeToggleBtn.classList.remove('pressed'), 160);
-        
+
         isDarkMode = !isDarkMode;
         if (isDarkMode) {
             document.body.classList.remove('light-mode');
@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Also trigger haptic on theme toggle touchstart
     ['touchstart', 'pointerdown'].forEach(evt => {
-        themeToggleBtn.addEventListener(evt, () => doHaptic(8), {passive: true});
+        themeToggleBtn.addEventListener(evt, () => doHaptic(8), { passive: true });
     });
 
 
@@ -270,16 +270,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Logo Tooltip
+    // Logo Click -> Refresh
     const logo = document.getElementById('logo-click');
-    const logoTooltip = document.getElementById('logo-tooltip');
-
     logo.addEventListener('click', () => {
-        logoTooltip.classList.add('show');
-        setTimeout(() => {
-            logoTooltip.classList.remove('show');
-        }, 2500);
+        location.reload();
     });
+
+    // Profile Photo Tooltip
+    const profilePhoto = document.getElementById('profile-photo');
+    const profileTooltip = document.getElementById('profile-tooltip');
+
+    if (profilePhoto && profileTooltip) {
+        profilePhoto.addEventListener('click', () => {
+            profileTooltip.classList.add('show');
+            setTimeout(() => {
+                profileTooltip.classList.remove('show');
+            }, 2500);
+        });
+    }
 
     // Scroll Reveal
     const revealOptions = {
