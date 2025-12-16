@@ -123,47 +123,92 @@ body.light-mode .navbar {
     text-shadow: 0 0 10px rgba(134, 194, 130, 0.5);
 }
 
-.logo-tooltip {
+
+
+.profile-tooltip {
     position: absolute;
-    top: 120%;
-    left: 50%;
-    transform: translateX(-50%) translateY(5px);
+    /* Lateral Positioning for Desktop default */
+    top: 20%;
+    left: 105%;
+    /* Push to right */
+    transform: translateY(0);
+
     background: var(--card-bg);
     color: var(--text-primary);
-    padding: 0.75rem 1rem;
-    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    border-radius: 30px;
+    /* Comic bubble roundness */
+    border-bottom-left-radius: 4px;
+    /* Playful corner */
+
     border: 2px solid var(--accent-green);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-family: 'Inter', sans-serif;
+    font-weight: 500;
     white-space: nowrap;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Bouncy pop */
     z-index: 1001;
 }
 
-.logo-tooltip::before {
+/* Arrow pointing Left (towards photo) */
+.profile-tooltip::before {
     content: '';
     position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 8px solid transparent;
-    border-bottom-color: var(--accent-green);
+    top: 50%;
+    right: 100%;
+    /* Arrow on left side */
+    left: auto;
+    bottom: auto;
+    transform: translateY(-50%);
+    border: 10px solid transparent;
+    border-right-color: var(--accent-green);
 }
 
-.logo-tooltip.show {
+.profile-tooltip.show {
     opacity: 1;
     visibility: visible;
-    transform: translateX(-50%) translateY(0);
+    transform: translateX(0);
+}
+
+/* Responsive: On mobile, move to bottom if space is tight */
+@media (max-width: 768px) {
+    .profile-tooltip {
+        top: 102%;
+        /* Closer to photo */
+        left: 50%;
+        transform: translateX(-50%);
+        border-bottom-left-radius: 30px;
+        /* Reset */
+        border-top-left-radius: 30px;
+        /* Fully rounded on mobile */
+    }
+
+    .profile-tooltip::before {
+        top: auto;
+        bottom: 100%;
+        /* Arrow on top */
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        border-right-color: transparent;
+        border-bottom-color: var(--accent-green);
+    }
+
+    .profile-tooltip.show {
+        transform: translateX(-50%) translateY(5px);
+        /* Less vertical movement */
+    }
 }
 
 .nav-links {
     display: flex;
     gap: 2rem;
     list-style: none;
-        z-index: 1100;
+    z-index: 1100;
 }
 
 .nav-links li a {

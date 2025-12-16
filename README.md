@@ -2,8 +2,10 @@
 
 Portfolio personale ingegneristico con design moderno, multilingua e supporto PDF.
 
-## 🌟 Release v4 — Highlights
+## 🌟 Release v4.6 — Highlights
 
+- **UI Interactive**: Logo click refreshes the page; Profile photo click shows a "thank you" tooltip bubble.
+- **Tooltip Style**: Lateral "comic bubble" on desktop, responsive (bottom-centered) on mobile.
 - Mobile: fixed mobile navbar, scrollable hamburger menu in landscape, reduced mobile font-size
 - UX: tactile (vibration) + visual feedback on language toggle
 - I18n: content updates (education, experiences) with Italian/English bullet lists
