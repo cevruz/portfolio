@@ -3,7 +3,7 @@
 Personal portfolio built with CSS, JavaScript and HTML;
 Supports multilingual modes (currently english/italian);
 
-## 🌟 Release v4 — Highlights
+## 🌟 Release v4.5 — Highlights
 
 - **UI Interactive**: Logo click refreshes the page; Profile photo click shows a "thank you" tooltip bubble.
 - **Tooltip Style**: Lateral "comic bubble" on desktop, responsive (bottom-centered) on mobile.
