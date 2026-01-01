@@ -1,4 +1,4 @@
-# Portfolio di Ciro Luca Cozzolino
+# Portfolio | Ciro Luca Cozzolino
 
 Personal portfolio built with CSS, JavaScript and HTML;
 Supports multilingual modes (currently english/italian);
@@ -15,8 +15,8 @@ Supports multilingual modes (currently english/italian);
 
 ## 🛠 Branch & Release
 
-- `main` — production (tagged `v4.5`)
-- `ai-dev` — active development (current work)
+- `main` — production
+- `ai-dev` — active development
 
 ## 📁 Project Structure (selected)
 
