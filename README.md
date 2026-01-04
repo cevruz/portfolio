@@ -1,6 +1,7 @@
-# Portfolio di Ciro Luca Cozzolino
+# Portfolio | Ciro Luca Cozzolino
 
-Portfolio personale ingegneristico con design moderno, multilingua e supporto PDF.
+Personal portfolio built with CSS, JavaScript and HTML;
+Supports multilingual modes (currently english/italian);
 
 ## 🌟 Release v5.0 — Highlights
 
@@ -43,12 +44,3 @@ portfolio/
 ├── optimize.js     # Image generation script (sharp)
 └── extract_cv.js   # Helper (extract text from CV PDF)
 ```
-
-## ✅ Notes & Testing
-
-- Language toggle shows the *target* language (EN when page is IT, and viceversa).
-- Education sections include bullet lists in both languages; use the language toggle to verify.
-- Mobile: open hamburger menu in landscape and ensure it scrolls smoothly; body scroll is locked while menu is open.
-
-If you want, I can add a short changelog file (`CHANGELOG.md`) and tidy the translations into separate JSON files.
-
