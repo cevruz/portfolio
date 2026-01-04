@@ -36,14 +36,18 @@ document.addEventListener('DOMContentLoaded', () => {
             "experience.sc.desc": "Attività di supporto e inclusione sociale per non vedenti e ipovedenti.",
             "projects.title": "Progetti Universitari",
             "projects.read_more": "Scopri di più",
-            "projects.p1.title": "Ottimizzazione solaio laterocemento",
-            "projects.p1.desc": "Analisi prestazioni termiche e miglioramento efficienza involucro.",
+            "projects.p1.title": "Simulazione bruciatore LUCY",
+            "projects.p1.desc": "Simulazione di una combustione non premiscelata in un bruciatore tipo LUCY con analisi comparativa di modelli di turbolenza e combustione.",
             "projects.p2.title": "Studio Comunità Montana Ivrea",
             "projects.p2.desc": "Strategie per l'autonomia energetica locale e risorse rinnovabili.",
             "projects.p3.title": "Riqualificazione edificio Portici",
             "projects.p3.desc": "Retrofit energetico con analisi costi-benefici e simulazioni dinamiche.",
             "projects.p4.title": "Ottimizzazione Aeroporto Capodichino",
             "projects.p4.desc": "Approccio efficiency-first per riduzione consumi e sostenibilità.",
+            "projects.p1.long_desc": "Questo progetto riguarda la simulazione fluidodinamica computazionale (CFD) della combustione in un bruciatore industriale di tipo LUCY. L'obiettivo principale è stato confrontare diversi modelli di turbolenza e combustione per ottimizzare l'efficienza e ridurre le emissioni inquinanti.",
+            "projects.p2.long_desc": "Lo studio analizza il potenziale energetico della Comunità Montana di Ivrea, valutando l'integrazione di biomasse, solare ed eolico per raggiungere l'autonomia energetica del territorio.",
+            "projects.p3.long_desc": "Progetto di retrofit energetico per un edificio situato a Portici. Attraverso simulazioni dinamiche, sono stati definiti interventi sull'involucro e sugli impianti per massimizzare il risparmio energetico.",
+            "projects.p4.long_desc": "Analisi dei consumi energetici dell'Aeroporto di Capodichino con proposte di efficientamento tramite l'uso di trigenerazione e integrazione di sistemi smart per la gestione dei carichi.",
             "skills.title": "Competenze",
             "skills.technical": "Competenze Tecniche",
             "skills.technical.list": "<li>• Efficienza Energetica e Sostenibilità</li><li>• Progettazione e Analisi Impianti HVAC</li><li>• Energie Rinnovabili (Fotovoltaico, Eolico, Geotermico)</li><li>• Modellazione Energetica Edifici (BEM/BIM)</li><li>• Analisi Termodinamica e Fluidodinamica</li><li>• Diagnosi Energetiche e Audit</li><li>• Gestione Progetti Energetici</li><li>• Analisi Dati</li>",
@@ -63,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "contacts.linkedin_profile": "Profilo LinkedIn",
             "contacts.location": "Località:",
             "footer.credit": "&copy; 2025 - Designed & Built by Ciro Luca Cozzolino",
+            "modal.download_pdf": "Scarica PDF",
             "modal.view_pdf": "Visualizza Documento PDF"
         },
         en: {
@@ -98,14 +103,18 @@ document.addEventListener('DOMContentLoaded', () => {
             "experience.sc.desc": "Support and social inclusion activities for blind and visually impaired people.",
             "projects.title": "University Projects",
             "projects.read_more": "Read More",
-            "projects.p1.title": "Energy optimization of a slab",
-            "projects.p1.desc": "Thermal performance analysis and envelope efficiency improvements.",
+            "projects.p1.title": "LUCY burner simulation",
+            "projects.p1.desc": "Simulation of non-premixed combustion in a LUCY-type burner with comparative analysis of turbulence and combustion models.",
             "projects.p2.title": "Ivrea Mountain Community Feasibility",
             "projects.p2.desc": "Assessment of renewable resources and strategies for local energy autonomy.",
             "projects.p3.title": "Building Retrofit in Portici",
             "projects.p3.desc": "Energy retrofit project with cost-benefit analysis and dynamic simulations.",
             "projects.p4.title": "Capodichino Airport Optimization",
             "projects.p4.desc": "Efficiency-first approach for consumption reduction and sustainability.",
+            "projects.p1.long_desc": "This project involves Computational Fluid Dynamics (CFD) simulation of combustion in a LUCY-type industrial burner. The main goal was to compare different turbulence and combustion models to optimize efficiency and reduce pollutant emissions.",
+            "projects.p2.long_desc": "This study analyzes the energy potential of the Ivrea Mountain Community, evaluating the integration of biomass, solar, and wind power to achieve regional energy autonomy.",
+            "projects.p3.long_desc": "Energy retrofit project for a building located in Portici. Through dynamic simulations, interventions on the envelope and systems were defined to maximize energy savings.",
+            "projects.p4.long_desc": "Analysis of energy consumption at Capodichino Airport with efficiency proposals through the use of trigeneration and the integration of smart load management systems.",
             "skills.title": "Skills",
             "skills.technical": "Technical Skills",
             "skills.technical.list": "<li>• Energy Efficiency & Sustainability</li><li>• HVAC System Design & Analysis</li><li>• Renewables (PV, Wind, Geothermal)</li><li>• Building Energy Modeling (BEM/BIM)</li><li>• Thermodynamics & Fluid Dynamics</li><li>• Energy Audits</li><li>• Energy Project Management</li><li>• Data Analysis</li>",
@@ -125,22 +134,48 @@ document.addEventListener('DOMContentLoaded', () => {
             "contacts.linkedin_profile": "LinkedIn Profile",
             "contacts.location": "Location:",
             "footer.credit": "&copy; 2025 - Designed & Built by Ciro Luca Cozzolino",
+            "modal.download_pdf": "Download PDF",
             "modal.view_pdf": "View PDF Document"
         }
     };
 
     const projectsData = {
         p1: {
-            pdf: "assets/tesina_tae.pdf"
+            pdf: "assets/tesina_combustione.pdf",
+            slides: [
+                "images/progetti/p1_slide1.jpg",
+                "images/progetti/p1_slide2.jpg",
+                "images/progetti/p1_slide3.jpg",
+                "images/progetti/p1_slide4.jpg"
+            ]
         },
         p2: {
-            pdf: "#" // Placeholder
+            pdf: "assets/tesina_tae.pdf",
+            slides: [
+                "images/progetti/p2_slide1.jpg",
+                "images/progetti/p2_slide2.jpg",
+                "images/progetti/p2_slide3.jpg",
+                "images/progetti/p2_slide4.jpg"
+            ]
         },
         p3: {
-            pdf: "assets/casa_portici.pdf"
+            pdf: "assets/casa_portici.pdf",
+            slides: [
+                "images/progetti/p3_slide1.jpg",
+                "images/progetti/p3_slide2.jpg",
+                "images/progetti/p3_slide3.jpg",
+                "images/progetti/p3_slide4.jpg",
+                "images/progetti/p3_slide5.jpg"
+            ]
         },
         p4: {
-            pdf: "assets/aeroporto_capodichino.pdf"
+            pdf: "assets/aeroporto_capodichino.pdf",
+            slides: [
+                "images/progetti/p4_slide1.jpg",
+                "images/progetti/p4_slide2.jpg",
+                "images/progetti/p4_slide3.jpg",
+                "images/progetti/p4_slide4.jpg"
+            ]
         }
     };
 
@@ -317,5 +352,119 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.transitionDelay = `${index * 0.05}s`;
     });
 
-    console.log("Portfolio v2.0 Loaded: i18n + Modals active.");
+    // --- MODAL PROGETTI LOGIC ---
+    const modal = document.getElementById('project-modal');
+    if (modal) {
+        const modalClose = document.getElementById('modal-close');
+        const modalOverlay = modal.querySelector('.modal-overlay');
+        const projectCardsModal = document.querySelectorAll('.project-card');
+
+        let currentSlideIndex = 0;
+        let currentProjectSlides = [];
+
+        function openProjectModal(projectId) {
+            const project = projectsData[projectId];
+            if (!project) return;
+
+            // Title & Description from translations
+            const titleKey = `projects.${projectId}.title`;
+            const descKey = `projects.${projectId}.long_desc`;
+
+            document.getElementById('modal-title').textContent = translations[currentLang][titleKey] || "";
+            document.getElementById('modal-description').innerHTML = translations[currentLang][descKey] || "";
+
+            // PDF Link
+            const downloadBtn = document.getElementById('modal-download');
+            downloadBtn.href = project.pdf;
+
+            // Slides
+            currentProjectSlides = project.slides || [];
+            currentSlideIndex = 0;
+            renderSlides();
+
+            // Show Modal
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevents background scroll
+        }
+
+        function closeProjectModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function renderSlides() {
+            const wrapper = document.getElementById('slides-wrapper');
+            wrapper.innerHTML = '';
+
+            if (currentProjectSlides.length === 0) {
+                document.querySelector('.slideshow-container').style.display = 'none';
+                return;
+            } else {
+                document.querySelector('.slideshow-container').style.display = 'block';
+            }
+
+            currentProjectSlides.forEach(src => {
+                const img = document.createElement('img');
+                img.src = src;
+                img.className = 'slide';
+                img.loading = 'lazy';
+                wrapper.appendChild(img);
+            });
+
+            updateSlidePosition();
+        }
+
+        function updateSlidePosition() {
+            const wrapper = document.getElementById('slides-wrapper');
+            wrapper.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+        }
+
+        function nextSlide() {
+            currentSlideIndex = (currentSlideIndex + 1) % currentProjectSlides.length;
+            updateSlidePosition();
+        }
+
+        function prevSlide() {
+            currentSlideIndex = (currentSlideIndex - 1 + currentProjectSlides.length) % currentProjectSlides.length;
+            updateSlidePosition();
+        }
+
+        // Event Listeners for Cards
+        projectCardsModal.forEach(card => {
+            card.addEventListener('click', () => {
+                const projectId = card.getAttribute('data-project');
+                openProjectModal(projectId);
+            });
+        });
+
+        // Close Modal
+        modalClose.addEventListener('click', closeProjectModal);
+        modalOverlay.addEventListener('click', closeProjectModal);
+
+        // Close on Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeProjectModal();
+            }
+        });
+
+        // Slideshow Nav
+        const nextSlideBtn = document.getElementById('next-slide');
+        const prevSlideBtn = document.getElementById('prev-slide');
+
+        if (nextSlideBtn) {
+            nextSlideBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                nextSlide();
+            });
+        }
+        if (prevSlideBtn) {
+            prevSlideBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                prevSlide();
+            });
+        }
+    }
+
+    console.log("Portfolio v4.6 Loaded: Modali Progetti attive con Slideshow.");
 });

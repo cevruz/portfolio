@@ -3,20 +3,34 @@
 Personal portfolio built with CSS, JavaScript and HTML;
 Supports multilingual modes (currently english/italian);
 
-## 🌟 Release v4.5 — Highlights
+## 🌟 Release v5.0 — Highlights
 
-- **UI Interactive**: Logo click refreshes the page; Profile photo click shows a "thank you" tooltip bubble.
-- **Tooltip Style**: Lateral "comic bubble" on desktop, responsive (bottom-centered) on mobile.
-- Mobile: fixed mobile navbar, scrollable hamburger menu in landscape, reduced mobile font-size
-- UX: tactile (vibration) + visual feedback on language toggle
-- I18n: content updates (education, experiences) with Italian/English bullet lists
-- Images: responsive WebP/JPEG variants and `<picture>` markup for conditional loading
-- Dev: `optimize.js` script to generate 320/640/1024 variants using `sharp`
+- **University Project Modals**: Detailed popups for "Progetti Universitari" with interactive image slideshows.
+- **Enhanced Mobile UX (v5.0)**: 
+    - **Adaptive Layout**: Side-by-side (landscape) and optimized portrait views for project modals.
+    - **Improved Navigation**: Modern SVG close buttons with haptic-ready states and glassmorphism styling.
+    - **Optimized Visuals**: Responsive slideshow heights and high-clarity technical image rendering.
+- **UI & UX Refinements**: 
+    - Logo click triggers page refresh.
+    - Profile photo features a lateral bouncy pop-in tooltip (Comic bubble style).
+    - Centered and localized "Download PDF" actions within modals.
+- **Technical Fixes**: Corrected project-specific PDF paths and handled layout inconsistencies in project cards.
 
 ## 🛠 Branch & Release
 
-- `main` — production
+- `main` — production (tagged `v5.0`)
 - `ai-dev` — active development
+
+## 🎯 Quick Start
+
+Install dependencies and generate responsive images:
+
+```bash
+npm install
+npm run optimize
+```
+
+Then open `index.html` in a browser (use Chrome DevTools device toolbar to test mobile + landscape).
 
 ## 📁 Project Structure (selected)
 
