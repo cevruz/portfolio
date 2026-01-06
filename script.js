@@ -66,7 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
             "contacts.linkedin": "LinkedIn:",
             "contacts.linkedin_profile": "Profilo LinkedIn",
             "contacts.location": "Località:",
-            "footer.credit": "&copy; 2025 - Designed & Built by Ciro Luca Cozzolino",
+            "contacts.connect": "Connettiamoci!",
+            "footer.credit": "&copy; 2026 - Designed & Built by Ciro Luca Cozzolino",
             "modal.download_pdf": "Scarica PDF",
             "modal.view_pdf": "Visualizza Documento PDF"
         },
@@ -133,7 +134,8 @@ document.addEventListener('DOMContentLoaded', () => {
             "contacts.linkedin": "LinkedIn:",
             "contacts.linkedin_profile": "LinkedIn Profile",
             "contacts.location": "Location:",
-            "footer.credit": "&copy; 2025 - Designed & Built by Ciro Luca Cozzolino",
+            "contacts.connect": "Connect with me!",
+            "footer.credit": "&copy; 2026 - Designed & Built by Ciro Luca Cozzolino",
             "modal.download_pdf": "Download PDF",
             "modal.view_pdf": "View PDF Document"
         }

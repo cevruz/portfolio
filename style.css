@@ -380,8 +380,8 @@ body.light-mode #theme-toggle:hover {
 
 /* 3. HEADER VERDE RINNOVABILE */
 header {
-    background-color: var(--accent-green);
-    color: var(--text-dark);
+    background: linear-gradient(90.8deg, rgb(27, 53, 68) 2.2%, rgb(110, 180, 135) 84%);
+    color: var(--text-primary);
     padding: 6rem 2rem;
     text-align: center;
     border-bottom-left-radius: 20px;
@@ -390,7 +390,7 @@ header {
 }
 
 body.light-mode header {
-    background: linear-gradient(135deg, #9BBF9B 0%, #A8CCA8 50%, #9BBF9B 100%);
+    background: radial-gradient(circle at -2.2% -3.8%, rgba(255, 227, 2, 0.41) 0%, rgb(59, 188, 241) 100.2%);
     color: #1a1a1a;
 }
 
@@ -456,7 +456,7 @@ header h2 {
     font-size: 1.5rem;
     font-weight: 400;
     margin-bottom: 1rem;
-    color: #333;
+    color: var(--text-secondary);
     letter-spacing: 0.5px;
     opacity: 0;
     animation: fadeInUp 0.6s ease 0.15s forwards;
@@ -519,7 +519,7 @@ header p {
     font-size: 1.1rem;
     max-width: 600px;
     margin: 0 auto;
-    color: #222;
+    color: var(--text-primary);
 }
 
 .header-tagline {
@@ -746,6 +746,11 @@ ul {
     border-color: var(--accent-green);
 }
 
+body.light-mode .comp-item:hover {
+    background: rgba(134, 194, 130, 0.08);
+    /* Lighter for contrast */
+}
+
 .comp-title {
     color: var(--text-primary);
     font-weight: 600;
@@ -776,6 +781,12 @@ ul {
     line-height: 1.6;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;
+}
+
+body.light-mode .comp-tooltip {
+    background: #fff;
+    color: #1a1a1a;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 /* Freccia del tooltip competenze */
@@ -825,6 +836,11 @@ ul {
     border-color: var(--accent-green);
 }
 
+body.light-mode .cert-item:hover {
+    background: rgba(134, 194, 130, 0.08);
+    /* Lighter for contrast */
+}
+
 .cert-title {
     color: var(--text-primary);
     font-weight: 600;
@@ -857,6 +873,12 @@ ul {
     pointer-events: none;
 }
 
+body.light-mode .cert-tooltip {
+    background: #fff;
+    color: #1a1a1a;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
 /* Freccia del tooltip */
 .cert-tooltip::after {
     content: '';
@@ -874,42 +896,157 @@ ul {
     transform: translateX(-50%) translateY(-5px);
 }
 
-/* Contatti */
-#contatti {
-    text-align: center;
+/* Contatti - Social Card Overhaul */
+.contact-card-container {
+    margin-top: 3rem;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.contact-card {
+    position: relative;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    background: var(--card-bg);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+    height: 60px;
+    width: 280px;
+    border-radius: 12px;
 }
 
-#contatti h2 {
-    position: static;
-    left: auto;
-    transform: none;
+body.light-mode .contact-card {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    /* Slightly more visible border */
 }
 
-#contatti p {
-    margin: 1rem auto;
-    font-size: 1.1rem;
-    max-width: 600px;
-    text-align: center;
-}
-
-#contatti a {
-    color: #86C282;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 3px;
-    font-weight: bold;
-    transition: var(--transition);
-}
-
-#contatti a:hover {
+.contact-card span {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
     color: #fff;
-    text-decoration-color: var(--accent-green);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    opacity: 1;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 5;
+    pointer-events: none;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Button CV Style */
+/* Ensure visibility in Dark Mode if it's not appearing - specialized for the firma only now */
+header .firma {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contact-card::before {
+    position: absolute;
+    content: "";
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 1;
+    background-color: var(--accent-green);
+}
+
+.contact-card:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.contact-card:hover span {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.contact-card:hover::before {
+    transform: translateY(-100%);
+}
+
+.contact-card .social-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33.33%;
+    height: 100%;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: 0.3s ease;
+    z-index: 0;
+}
+
+.contact-card:hover .social-link {
+    z-index: 10;
+    /* Above everything else when open */
+}
+
+.contact-card .social-link svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+    color: var(--text-primary);
+    /* Default theme text color */
+}
+
+/* On hover of the card, icons turn white against green doors as they slide */
+.contact-card:hover .social-link svg {
+    color: #fff;
+}
+
+.contact-card .social-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    animation: bounceIcon 0.4s linear;
+}
+
+body.light-mode .contact-card .social-link:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+@keyframes bounceIcon {
+    40% {
+        transform: scale(1.4);
+    }
+
+    60% {
+        transform: scale(0.8);
+    }
+
+    80% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Response adjustment for small phones */
+@media (max-width: 480px) {
+    .contact-card {
+        width: 240px;
+        height: 55px;
+    }
+
+    .contact-card span {
+        font-size: 1rem;
+    }
+}
+
+/* Button CV Style (Restored) */
 .btn-cv {
     display: inline-block;
     padding: 0.8rem 2rem;
@@ -918,14 +1055,15 @@ ul {
     color: var(--accent-green);
     border: 2px solid var(--accent-green);
     border-radius: 30px;
-    text-decoration: none;
+    text-decoration: none !important;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background: transparent;
 }
 
 .btn-cv:hover {
     background: var(--accent-green);
-    color: var(--text-dark);
+    color: var(--text-dark) !important;
     transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(134, 194, 130, 0.3);
 }
@@ -933,6 +1071,8 @@ ul {
 .btn-cv:active {
     transform: translateY(-1px);
 }
+
+
 
 
 /* Footer */
