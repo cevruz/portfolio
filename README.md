@@ -1,34 +1,22 @@
 # Portfolio | Ciro Luca Cozzolino
 
-Personal portfolio built with CSS, JavaScript and HTML;
-Supports multilingual modes (currently english/italian);
+Portfolio personale ingegneristico con design moderno, multilingua e supporto PDF.
 
-<<<<<<<<< Temporary merge branch 1
-## 🌟 Release v4 — Highlights
-=========
-## 🌟 Release v5.0 — Highlights
->>>>>>>>> Temporary merge branch 2
+## 🌟 Release v5.3 — Highlights
 
-- **University Project Modals**: Detailed popups for "Progetti Universitari" with interactive image slideshows.
-- **Enhanced Mobile UX (v5.0)**: 
-    - **Adaptive Layout**: Side-by-side (landscape) and optimized portrait views for project modals.
-    - **Improved Navigation**: Modern SVG close buttons with haptic-ready states and glassmorphism styling.
-    - **Optimized Visuals**: Responsive slideshow heights and high-clarity technical image rendering.
-- **UI & UX Refinements**: 
-    - Logo click triggers page refresh.
-    - Profile photo features a lateral bouncy pop-in tooltip (Comic bubble style).
-    - Centered and localized "Download PDF" actions within modals.
-- **Technical Fixes**: Corrected project-specific PDF paths and handled layout inconsistencies in project cards.
+- **Modern Contact Section (v5.3)**: 
+    - **Upward Curtain Animation**: Replaced the previous opening with a single, elegant "curtain" that slides up to reveal contact links.
+    - **Interactive Social Card**: Redesigned contact links for Email, WhatsApp, and LinkedIn into a single interactive component.
+- **UI & UX Refinements (v5.2/v5.3)**: 
+    - **Light Mode Tooltips**: Softened backgrounds and high-contrast text for better readability.
+    - **Restored CV Button**: Fixed the "Download CV" button design and centered it for better focus.
+    - **Clean Interface**: Removed unnecessary locality details from the contact section.
+- **University Project Modals (v5.0)**: Detailed popups with technical slideshows and localized descriptions.
 
 ## 🛠 Branch & Release
 
-<<<<<<<<< Temporary merge branch 1
-- `main` — production (tagged `v4.5`)
-- `ai-dev` — active development (current work)
-=========
-- `main` — production (tagged `v5.0`)
+- `main` — production (tagged `v5.3`)
 - `ai-dev` — active development
->>>>>>>>> Temporary merge branch 2
 
 ## 🎯 Quick Start
 
@@ -53,3 +41,11 @@ portfolio/
 ├── optimize.js     # Image generation script (sharp)
 └── extract_cv.js   # Helper (extract text from CV PDF)
 ```
+
+## ✅ Notes & Testing
+
+- Language toggle shows the *target* language (EN when page is IT, and viceversa).
+- Education sections include bullet lists in both languages; use the language toggle to verify.
+- Mobile: open hamburger menu in landscape and ensure it scrolls smoothly; body scroll is locked while menu is open.
+
+If you want, I can add a short changelog file (`CHANGELOG.md`) and tidy the translations into separate JSON files.
