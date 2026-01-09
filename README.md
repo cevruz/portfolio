@@ -4,14 +4,9 @@ Portfolio personale ingegneristico con design moderno, multilingua e supporto PD
 
 ## 🌟 Release v5.3 — Highlights
 
-- **Modern Contact Section (v5.3)**: 
-    - **Upward Curtain Animation**: Replaced the previous opening with a single, elegant "curtain" that slides up to reveal contact links.
-    - **Interactive Social Card**: Redesigned contact links for Email, WhatsApp, and LinkedIn into a single interactive component.
-- **UI & UX Refinements (v5.2/v5.3)**: 
-    - **Light Mode Tooltips**: Softened backgrounds and high-contrast text for better readability.
-    - **Restored CV Button**: Fixed the "Download CV" button design and centered it for better focus.
-    - **Clean Interface**: Removed unnecessary locality details from the contact section.
-- **University Project Modals (v5.0)**: Detailed popups with technical slideshows and localized descriptions.
+- **v5.4**: UI Polish & Heading unification. Fixed Contact Icon contrast in Light Mode and unified Header typography colors to absolute white for a cleaner look.
+- **v5.3**: Interactive Contact Card with Curtain Animation. Added "Connettiamoci!" interactive button with upward sliding effect.
+- **v5.2**: UI Refinements & Contrast Fixes. Improved accessibility in Light Mode and updated footer year (2026).
 
 ## 🛠 Branch & Release
 
