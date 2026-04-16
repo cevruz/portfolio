@@ -910,7 +910,7 @@ body.light-mode .skill-bar-fill {
     background: linear-gradient(90deg, var(--accent-green), #7bc074);
 }
 
-/* Certificazioni con Barre Progresso */
+/* Certificazioni - Card Layout */
 .certificazioni-wrapper {
     display: flex;
     flex-direction: column;
@@ -918,80 +918,9 @@ body.light-mode .skill-bar-fill {
     margin-top: 2rem;
 }
 
-.cert-bar-wrapper {
-    background: var(--card-bg);
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: var(--shadow-soft);
-    transition: var(--transition);
-}
-
-.cert-bar-wrapper:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-hover);
-}
-
-.cert-bar-header {
+.cert-card-wrapper {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.75rem;
-}
-
-.cert-bar-label {
-    color: var(--text-primary);
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-.cert-bar-score {
-    color: var(--accent-green);
-    font-size: 0.95rem;
-    font-weight: 700;
-    padding: 0.25rem 0.75rem;
-    background: rgba(134, 194, 130, 0.15);
-    border-radius: 15px;
-}
-
-.cert-bar-track {
-    width: 100%;
-    height: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-body.light-mode .cert-bar-track {
-    background: rgba(0, 0, 0, 0.1);
-}
-
-.cert-bar-fill {
-    height: 100%;
-    width: 0;
-    background: linear-gradient(90deg, var(--accent-green), #a8d5a2);
-    border-radius: 5px;
-    transition: width 1s ease-out;
-}
-
-.cert-bar-fill.animate {
-    width: attr(data-width);
-}
-
-body.light-mode .cert-bar-fill {
-    background: linear-gradient(90deg, var(--accent-green), #7bc074);
-}
-
-.cert-bar-desc {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    margin-top: 0.75rem;
-    line-height: 1.5;
-}
-
-/* Certificazione Badge Trinity */
-.cert-badge-wrapper {
-    display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1.5rem;
     background: var(--card-bg);
     padding: 1.5rem;
@@ -1000,16 +929,16 @@ body.light-mode .cert-bar-fill {
     transition: var(--transition);
 }
 
-.cert-badge-wrapper:hover {
+.cert-card-wrapper:hover {
     transform: translateY(-3px);
     box-shadow: var(--shadow-hover);
 }
 
-.cert-badge {
+.cert-icon {
     flex-shrink: 0;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
     background: linear-gradient(135deg, var(--accent-green), #a8d5a2);
     display: flex;
     flex-direction: column;
@@ -1018,32 +947,71 @@ body.light-mode .cert-bar-fill {
     box-shadow: 0 4px 15px rgba(134, 194, 130, 0.3);
 }
 
-body.light-mode .cert-badge {
+body.light-mode .cert-icon {
     background: linear-gradient(135deg, var(--accent-green), #7bc074);
 }
 
-.cert-badge-level {
-    color: var(--text-dark);
-    font-size: 1.4rem;
-    font-weight: 700;
-    line-height: 1;
+.cert-icon--trinity {
+    background: linear-gradient(135deg, #5C9CE5, #89BFF8);
 }
 
-.cert-badge-label {
+body.light-mode .cert-icon--trinity {
+    background: linear-gradient(135deg, #4A8BD4, #6BA3E0);
+}
+
+.cert-icon--cnc {
+    background: linear-gradient(135deg, #E5785C, #F5A089);
+}
+
+body.light-mode .cert-icon--cnc {
+    background: linear-gradient(135deg, #D46A4E, #E8825F);
+}
+
+.cert-icon-level {
     color: var(--text-dark);
-    font-size: 0.55rem;
-    font-weight: 500;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.cert-icon-label {
+    color: var(--text-dark);
+    font-size: 0.6rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    margin-top: 2px;
 }
 
-.cert-badge-content {
+.cert-card-content {
     flex: 1;
 }
 
-.cert-badge-content .cert-bar-desc {
-    margin-top: 0;
+.cert-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.cert-card-title {
+    color: var(--text-primary);
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.cert-card-badge {
+    color: var(--accent-green);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    background: rgba(134, 194, 130, 0.15);
+    border-radius: 10px;
+}
+
+.cert-card-desc {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
 /* Timeline */
