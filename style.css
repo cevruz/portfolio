@@ -942,13 +942,200 @@ body.light-mode .skill-bar-fill {
 
 body.light-mode .cert-item:hover {
     background: rgba(134, 194, 130, 0.08);
-    /* Lighter for contrast */
 }
 
 .cert-title {
     color: var(--text-primary);
     font-weight: 600;
     font-size: 1rem;
+}
+
+/* Timeline */
+.timeline-legend {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.legend-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+.legend-dot--education {
+    background: #64B5F6;
+    box-shadow: 0 0 8px rgba(100, 181, 246, 0.5);
+}
+
+.legend-dot--work {
+    background: var(--accent-green);
+    box-shadow: 0 0 8px rgba(134, 194, 130, 0.5);
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--accent-green), #64B5F6);
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-item--left {
+    left: 0;
+}
+
+.timeline-item--right {
+    left: 50%;
+}
+
+.timeline-dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 4px solid var(--bg-color);
+    top: 1.5rem;
+    z-index: 10;
+}
+
+.timeline-item--left .timeline-dot {
+    right: -10px;
+}
+
+.timeline-item--right .timeline-dot {
+    left: -10px;
+}
+
+.timeline-item--education .timeline-dot {
+    background: #64B5F6;
+    box-shadow: 0 0 12px rgba(100, 181, 246, 0.6);
+}
+
+.timeline-item--work .timeline-dot {
+    background: var(--accent-green);
+    box-shadow: 0 0 12px rgba(134, 194, 130, 0.6);
+}
+
+.timeline-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.timeline-item--education .timeline-card {
+    border-left: 4px solid #64B5F6;
+}
+
+.timeline-item--work .timeline-card {
+    border-left: 4px solid var(--accent-green);
+}
+
+.timeline-item--left .timeline-card {
+    border-left: 4px solid;
+    border-right: none;
+}
+
+.timeline-item--right .timeline-card {
+    border-left: none;
+    border-right: 4px solid;
+}
+
+.timeline-date {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+}
+
+body.light-mode .timeline-date {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.timeline-card h3 {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.timeline-place {
+    color: var(--accent-green);
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+
+.timeline-card p,
+.timeline-card li {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.timeline-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0 0 0;
+}
+
+.timeline-list li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent-green);
 }
 
 /* Tooltip */
@@ -1359,6 +1546,76 @@ footer p {
 
     .skill-bar-track {
         height: 8px;
+    }
+
+    /* Timeline Responsive */
+    .timeline-legend {
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .legend-item {
+        font-size: 0.85rem;
+    }
+
+    .timeline {
+        padding: 1rem 0;
+    }
+
+    .timeline-line {
+        left: 20px;
+        width: 3px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding: 0 0 0 50px;
+        margin-bottom: 2rem;
+    }
+
+    .timeline-item--left,
+    .timeline-item--right {
+        left: 0;
+    }
+
+    .timeline-dot {
+        width: 16px;
+        height: 16px;
+        left: 12px !important;
+        right: auto !important;
+    }
+
+    .timeline-item--left .timeline-dot,
+    .timeline-item--right .timeline-dot {
+        left: 12px;
+        right: auto;
+    }
+
+    .timeline-card {
+        padding: 1.25rem;
+    }
+
+    .timeline-card h3 {
+        font-size: 1rem;
+    }
+
+    .timeline-card p,
+    .timeline-card li {
+        font-size: 0.9rem;
+    }
+
+    .timeline-item--left .timeline-card,
+    .timeline-item--right .timeline-card {
+        border-left: 4px solid;
+        border-right: none;
+    }
+
+    .timeline-item--education .timeline-card {
+        border-left-color: #64B5F6;
+    }
+
+    .timeline-item--work .timeline-card {
+        border-left-color: var(--accent-green);
     }
 
     /* Fix Tooltips on Mobile */
