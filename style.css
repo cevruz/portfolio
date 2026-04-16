@@ -95,7 +95,7 @@ body.light-mode .navbar {
     width: 95%;
     max-width: 1400px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: 100%;
 }
@@ -105,13 +105,12 @@ body.light-mode .navbar {
     gap: 2rem;
     list-style: none;
     z-index: 1100;
+    margin: 0;
+    padding: 0;
 }
 
-.logo-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: 100%;
+.nav-links li:first-child {
+    margin-right: 0.5rem;
 }
 
 .logo {
