@@ -384,6 +384,30 @@ document.addEventListener('DOMContentLoaded', () => {
         skillObserver.observe(bar);
     });
 
+    // Cert Bars Animation with IntersectionObserver
+    const certBars = document.querySelectorAll('.cert-bar-fill');
+    const certObserverOptions = {
+        threshold: 0.3,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const certObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const bar = entry.target;
+                const width = bar.getAttribute('data-width');
+                setTimeout(() => {
+                    bar.style.width = width + '%';
+                }, 100);
+                certObserver.unobserve(bar);
+            }
+        });
+    }, certObserverOptions);
+
+    certBars.forEach(bar => {
+        certObserver.observe(bar);
+    });
+
     // Timeline Animation with IntersectionObserver
     const timelineItems = document.querySelectorAll('.timeline-item');
     const timelineObserverOptions = {
