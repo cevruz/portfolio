@@ -378,16 +378,170 @@ body.light-mode #theme-toggle:hover {
     transform: translateY(50%) rotate(-45deg);
 }
 
-/* 3. HEADER VERDE RINNOVABILE */
+/* 3. HEADER HERO */
 header {
-    background: linear-gradient(90.8deg, rgb(27, 53, 68) 2.2%, rgb(110, 180, 135) 84%);
+    background: linear-gradient(135deg, rgb(27, 53, 68) 0%, rgb(110, 180, 135) 100%);
     color: #ffffff;
-    /* Unified white for all items */
-    padding: 6rem 2rem;
+    padding: 8rem 2rem 6rem;
     text-align: center;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
     margin-bottom: 4rem;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.light-mode header {
+    background: linear-gradient(135deg, rgb(59, 188, 241) 0%, rgb(134, 194, 130) 100%);
+    color: #1a1a1a;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 800px;
+}
+
+/* Hero Animation Classes */
+.hero-animate {
+    opacity: 0;
+}
+
+.hero-animate.animate {
+    animation: heroFadeInUp 0.6s ease forwards;
+}
+
+.hero-photo {
+    animation-delay: 0.1s;
+}
+
+.hero-name {
+    animation-delay: 0.3s;
+}
+
+.hero-subtitle {
+    animation-delay: 0.5s;
+}
+
+.hero-cta {
+    animation-delay: 0.7s;
+}
+
+@keyframes heroFadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Profile Photo */
+.profile-photo-container {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-photo-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(134, 194, 130, 0.5) 0%, transparent 70%);
+    filter: blur(25px);
+    border-radius: 50%;
+    z-index: -1;
+    animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        opacity: 0.6;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid var(--accent-green);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(134, 194, 130, 0.3);
+    object-fit: cover;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(134, 194, 130, 0.4);
+}
+
+/* Hero Name */
+.firma {
+    font-family: 'Crimson Pro', serif;
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+body.light-mode .firma {
+    color: #1a1a1a;
+    text-shadow: none;
+}
+
+/* Hero Subtitle */
+header h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.85);
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+body.light-mode header h2 {
+    color: rgba(26, 26, 26, 0.8);
+}
+
+/* Hero CTA Button */
+.btn-cv-hero {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: var(--accent-green);
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(134, 194, 130, 0.4);
+    margin-top: 0.5rem;
+}
+
+.btn-cv-hero:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(134, 194, 130, 0.5);
+    background: #9dd498;
+}
+
+.btn-cv-hero:active {
+    transform: scale(1.02);
 }
 
 body.light-mode header {
@@ -1750,6 +1904,35 @@ footer p {
 
     body {
         padding-top: 66px;
+    }
+
+    /* Hero Mobile */
+    header {
+        padding: 6rem 1.5rem 4rem;
+        min-height: auto;
+    }
+
+    .header-content {
+        gap: 1.25rem;
+    }
+
+    .profile-photo {
+        width: 160px;
+        height: 160px;
+    }
+
+    .firma {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+
+    header h2 {
+        font-size: 1rem;
+    }
+
+    .btn-cv-hero {
+        padding: 0.85rem 2rem;
+        font-size: 0.95rem;
     }
 }
 

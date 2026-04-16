@@ -332,6 +332,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Hero Animations
+    window.addEventListener('load', () => {
+        const heroElements = document.querySelectorAll('.hero-animate');
+        heroElements.forEach(el => {
+            el.classList.add('animate');
+        });
+    });
+
     // Scroll Reveal
     const revealOptions = {
         threshold: 0.15,
