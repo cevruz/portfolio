@@ -1067,7 +1067,7 @@ body.light-mode .cert-item:hover {
 }
 
 .timeline-item--education .timeline-card {
-    border-left: 4px solid #64B5F6;
+    border-left: 4px solid var(--accent-green);
 }
 
 .timeline-item--work .timeline-card {
@@ -1075,13 +1075,13 @@ body.light-mode .cert-item:hover {
 }
 
 .timeline-item--left .timeline-card {
-    border-left: 4px solid;
-    border-right: none;
+    border-left: 4px solid var(--accent-green);
+    border-right: 1px solid rgba(134, 194, 130, 0.15);
 }
 
 .timeline-item--right .timeline-card {
-    border-left: none;
-    border-right: 4px solid;
+    border-left: 1px solid rgba(134, 194, 130, 0.15);
+    border-right: 4px solid var(--accent-green);
 }
 
 .timeline-date {
@@ -1608,14 +1608,11 @@ footer p {
 
     .timeline-item--left .timeline-card,
     .timeline-item--right .timeline-card {
-        border-left: 4px solid;
-        border-right: none;
+        border-left: 4px solid var(--accent-green);
+        border-right: 1px solid rgba(134, 194, 130, 0.15);
     }
 
-    .timeline-item--education .timeline-card {
-        border-left-color: #64B5F6;
-    }
-
+    .timeline-item--education .timeline-card,
     .timeline-item--work .timeline-card {
         border-left-color: var(--accent-green);
     }
