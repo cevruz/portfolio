@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "projects.p3.long_desc": "Progetto di retrofit energetico per un edificio situato a Portici. Attraverso simulazioni dinamiche, sono stati definiti interventi sull'involucro e sugli impianti per massimizzare il risparmio energetico.",
             "projects.p4.long_desc": "Analisi dei consumi energetici dell'Aeroporto di Capodichino con proposte di efficientamento tramite l'uso di trigenerazione e integrazione di sistemi smart per la gestione dei carichi.",
             "skills.title": "Competenze",
-            "skills.technical": "Competenze Tecniche",
+            "skills.technical": "Competenze Tecniche e Settoriali",
             "skills.technical.list": "<li>• Efficienza Energetica e Sostenibilità</li><li>• Progettazione e Analisi Impianti HVAC</li><li>• Energie Rinnovabili (Fotovoltaico, Eolico, Geotermico)</li><li>• Modellazione Energetica Edifici (BEM/BIM)</li><li>• Analisi Termodinamica e Fluidodinamica</li><li>• Diagnosi Energetiche e Audit</li><li>• Gestione Progetti Energetici</li><li>• Analisi Dati</li>",
             "skills.software": "Software",
             "skills.software.list": "<li>• AutoCAD, Revit</li><li>• MATLAB</li><li>• TRNSYS, EnergyPlus, DesignBuilder</li><li>• PVSyst, PVGis</li><li>• Microsoft Office Suite (Excel, Word, PowerPoint)</li>",
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "projects.p3.long_desc": "Energy retrofit project for a building located in Portici. Through dynamic simulations, interventions on the envelope and systems were defined to maximize energy savings.",
             "projects.p4.long_desc": "Analysis of energy consumption at Capodichino Airport with efficiency proposals through the use of trigeneration and the integration of smart load management systems.",
             "skills.title": "Skills",
-            "skills.technical": "Technical Skills",
+            "skills.technical": "Technical & Sector Skills",
             "skills.technical.list": "<li>• Energy Efficiency & Sustainability</li><li>• HVAC System Design & Analysis</li><li>• Renewables (PV, Wind, Geothermal)</li><li>• Building Energy Modeling (BEM/BIM)</li><li>• Thermodynamics & Fluid Dynamics</li><li>• Energy Audits</li><li>• Energy Project Management</li><li>• Data Analysis</li>",
             "skills.software": "Software",
             "skills.software.list": "<li>• AutoCAD, Revit</li><li>• MATLAB</li><li>• TRNSYS, EnergyPlus, DesignBuilder</li><li>• PVSyst, PVGis</li><li>• Microsoft Office Suite</li>",
@@ -352,6 +352,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectCards = document.querySelectorAll('.project-card');
     projectCards.forEach((card, index) => {
         card.style.transitionDelay = `${index * 0.05}s`;
+    });
+
+    // Skill Bars Animation with IntersectionObserver
+    const skillBars = document.querySelectorAll('.skill-bar-fill');
+    const skillObserverOptions = {
+        threshold: 0.3,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const skillObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const bar = entry.target;
+                const width = bar.getAttribute('data-width');
+                setTimeout(() => {
+                    bar.style.width = width + '%';
+                }, 100);
+                skillObserver.unobserve(bar);
+            }
+        });
+    }, skillObserverOptions);
+
+    skillBars.forEach(bar => {
+        skillObserver.observe(bar);
     });
 
     // --- MODAL PROGETTI LOGIC ---
