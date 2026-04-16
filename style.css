@@ -998,6 +998,8 @@ body.light-mode .cert-item:hover {
     background: linear-gradient(to bottom, var(--accent-green), #64B5F6);
     transform: translateX(-50%);
     border-radius: 2px;
+    mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
 }
 
 .timeline-item {
