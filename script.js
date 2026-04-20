@@ -243,47 +243,6 @@ document.addEventListener('DOMContentLoaded', () => {
         langToggleBtn.addEventListener(evt, () => doHaptic(8), { passive: true });
     });
 
-    // Theme Toggle (Dark/Light Mode)
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const themeIconMoon = document.getElementById('theme-icon-moon');
-    const themeIconSun = document.getElementById('theme-icon-sun');
-    let isDarkMode = localStorage.getItem('theme') === 'light' ? false : true;
-
-    // Apply saved theme on page load
-    if (!isDarkMode) {
-        document.body.classList.add('light-mode');
-        themeIconMoon.style.display = 'block';  // Luna quando light mode
-        themeIconSun.style.display = 'none';
-    } else {
-        document.body.classList.remove('light-mode');
-        themeIconSun.style.display = 'block';   // Sole quando dark mode
-        themeIconMoon.style.display = 'none';
-    }
-
-    themeToggleBtn.addEventListener('click', () => {
-        doHaptic(10);
-        themeToggleBtn.classList.add('pressed');
-        setTimeout(() => themeToggleBtn.classList.remove('pressed'), 160);
-
-        isDarkMode = !isDarkMode;
-        if (isDarkMode) {
-            document.body.classList.remove('light-mode');
-            themeIconSun.style.display = 'block';   // Sole in dark mode
-            themeIconMoon.style.display = 'none';
-            localStorage.setItem('theme', 'dark');
-        } else {
-            document.body.classList.add('light-mode');
-            themeIconMoon.style.display = 'block';  // Luna in light mode
-            themeIconSun.style.display = 'none';
-            localStorage.setItem('theme', 'light');
-        }
-    });
-
-    // Also trigger haptic on theme toggle touchstart
-    ['touchstart', 'pointerdown'].forEach(evt => {
-        themeToggleBtn.addEventListener(evt, () => doHaptic(8), { passive: true });
-    });
-
 
     /* =========================================
        3. ANIMATIONS & UI (Existing)
@@ -368,35 +327,23 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.transitionDelay = `${index * 0.05}s`;
     });
 
-    // Skill Bars Animation with IntersectionObserver
+    // Skill Bars Animation
     const skillBars = document.querySelectorAll('.skill-bar-fill');
-    const skillObserverOptions = {
-        threshold: 0.3,
-        rootMargin: "0px 0px -50px 0px"
-    };
-
-    const skillObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const bar = entry.target;
+    setTimeout(() => {
+        skillBars.forEach((bar, index) => {
+            setTimeout(() => {
                 const width = bar.getAttribute('data-width');
-                setTimeout(() => {
-                    bar.style.width = width + '%';
-                }, 100);
-                skillObserver.unobserve(bar);
-            }
+                bar.style.width = width + '%';
+                bar.classList.add('visible');
+            }, index * 150);
         });
-    }, skillObserverOptions);
-
-    skillBars.forEach(bar => {
-        skillObserver.observe(bar);
-    });
+    }, 500);
 
     // Timeline Animation with IntersectionObserver
     const timelineItems = document.querySelectorAll('.timeline-item');
     const timelineObserverOptions = {
-        threshold: 0.2,
-        rootMargin: "0px 0px -50px 0px"
+        threshold: 0.05,
+        rootMargin: "0px 0px -30px 0px"
     };
 
     const timelineObserver = new IntersectionObserver((entries) => {

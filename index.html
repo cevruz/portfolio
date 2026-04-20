@@ -33,28 +33,6 @@
                 <li><a href="#certificazioni" data-i18n="nav.certifications">Certificazioni</a></li>
                 <li><a href="#contatti" data-i18n="nav.contacts">Contatti</a></li>
                 <li class="lang-switch">
-                    <button id="theme-toggle" aria-label="Toggle Theme">
-                        <svg id="theme-icon-moon" class="theme-icon theme-icon-moon" width="20" height="20"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" style="display: none;">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                        </svg>
-                        <svg id="theme-icon-sun" class="theme-icon theme-icon-sun" width="20" height="20"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" style="display: block;">
-                            <circle cx="12" cy="12" r="5"></circle>
-                            <line x1="12" y1="1" x2="12" y2="3"></line>
-                            <line x1="12" y1="21" x2="12" y2="23"></line>
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                            <line x1="1" y1="12" x2="3" y2="12"></line>
-                            <line x1="21" y1="12" x2="23" y2="12"></line>
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                        </svg>
-                    </button>
-                </li>
-                <li class="lang-switch">
                     <button id="lang-toggle" aria-label="Switch Language">
                         <span id="lang-label" class="lang-text">EN</span>
                     </button>
@@ -68,34 +46,28 @@
         </div>
     </nav>
 
-    <!-- Header Verde Rinnovabile -->
+    <!-- Header with Glassmorphism Blobs -->
     <header id="home">
-        <div class="header-content">
-            <div class="hero-animate hero-photo">
-                <div class="profile-photo-container">
-                    <span class="profile-tooltip" id="profile-tooltip">Grazie per la visualizzazione!</span>
-                    <picture>
-                        <source type="image/webp"
-                            srcset="images/foto_cv_2025-1024.webp 1024w, images/foto_cv_2025-640.webp 640w, images/foto_cv_2025-320.webp 320w"
-                            sizes="(max-width:600px) 320px, (max-width:1024px) 640px, 1024px">
-                        <source type="image/jpeg"
-                            srcset="images/foto_cv_2025-1024.jpg 1024w, images/foto_cv_2025-640.jpg 640w, images/foto_cv_2025-320.webp 320w"
-                            sizes="(max-width:600px) 320px, (max-width:1024px) 640px, 1024px">
-                        <img src="images/foto_cv_2025-640.jpg" alt="Ciro Luca Cozzolino" class="profile-photo"
-                            id="profile-photo" loading="eager">
-                    </picture>
-                </div>
-            </div>
-            <div class="hero-animate hero-name">
-                <h1 class="firma" data-i18n="header.greeting">Ciao, sono Ciro Luca Cozzolino!</h1>
-            </div>
-            <div class="hero-animate hero-subtitle">
-                <h2 data-i18n="header.role">Ingegnere Meccanico per l'Energia e l'Ambiente</h2>
-            </div>
-            <div class="hero-animate hero-cta">
-                <a href="assets/cv_ciro_luca_cozzolino.pdf" class="btn-cv-hero" download data-i18n="about.download_cv">Scarica CV</a>
+        <div class="hero-blob hero-blob-photo">
+            <div class="profile-photo-container">
+                <span class="profile-tooltip" id="profile-tooltip">Grazie per la visualizzazione!</span>
+                <picture>
+                    <source type="image/webp"
+                        srcset="images/foto_cv_2025-1024.webp 1024w, images/foto_cv_2025-640.webp 640w, images/foto_cv_2025-320.webp 320w"
+                        sizes="(max-width:600px) 320px, (max-width:1024px) 640px, 1024px">
+                    <source type="image/jpeg"
+                        srcset="images/foto_cv_2025-1024.jpg 1024w, images/foto_cv_2025-640.jpg 640w, images/foto_cv_2025-320.webp 320w"
+                        sizes="(max-width:600px) 320px, (max-width:1024px) 640px, 1024px">
+                    <img src="images/foto_cv_2025-640.jpg" alt="Ciro Luca Cozzolino" class="profile-photo"
+                        id="profile-photo" loading="eager">
+                </picture>
             </div>
         </div>
+        <div class="hero-blob hero-blob-name">
+            <h1 class="firma" data-i18n="header.greeting">Ciao, sono Ciro Luca Cozzolino!</h1>
+            <h2 data-i18n="header.role">Ingegnere Meccanico per l'Energia e l'Ambiente</h2>
+        </div>
+        <a href="assets/cv_ciro_luca_cozzolino.pdf" class="hero-blob hero-blob-cta btn-cv-hero" download data-i18n="about.download_cv">Scarica CV</a>
     </header>
 
     <section id="chi-sono">

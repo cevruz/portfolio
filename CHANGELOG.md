@@ -10,6 +10,8 @@ Questo documento traccia tutte le modifiche apportate al portfolio durante lo sv
 
 | Hash | Descrizione |
 |------|-------------|
+| `x` | Remove light mode completely, fix timeline and skill bars animations |
+| `x` | Hero section glassmorphism: blob foto, nome e pulsante con animazioni fluttuanti, gradient e blend con chi-sono |
 | `6cf3450` | Move Home into nav-links for proper spacing, center all nav elements |
 | `76c9a27` | Fix navbar spacing, add sophisticated shimmer animation to CV button |
 | `f7fc518` | Blend navbar Home button style with nav links, increase spacing |
@@ -25,18 +27,24 @@ Questo documento traccia tutte le modifiche apportate al portfolio durante lo sv
 
 ## Funzionalità Implementate
 
-### 1. Hero Section (`header`)
-- Layout centrato con flexbox
-- Animazioni sequenziali fade-in + translateY (foto: 0.1s, nome: 0.3s, sottotitolo: 0.5s, CTA: 0.7s)
-- Tipografia migliorata: nome 3rem bold, sottotitolo font-weight 300
-- Pulsante CV con effetto shimmer all'hover
-- Foto circolare con bordo accent-green e glow animato
+### 1. Hero Section Glassmorphism (`header`)
+- Layout con 3 blob glassmorphism affiancati:
+  - **Blob sinistro**: foto profilo circolare (280px) con effetto vetro, border trasparente, shadow scuro
+  - **Blob centrale**: card rettangolare con nome (2.5rem) e sottotitolo, backdrop blur
+  - **Blob destro**: pulsante "Scarica CV" stilizzato come pillola glassmorphism
+- Animazioni fluttuanti diverse per ogni blob (6s, 7s, 8s)
+- Gradient verde scuro header (`linear-gradient(to bottom, #0d2818, #1a3d2a, #245c3d)`)
+- Blenda seamless con section `#chi-sono` usando pseudo-elemento 100vw
+- Versione light mode con gradient verde chiaro
+- Responsive: mobile con layout wrap e blob "Scarica CV" ridimensionato
 
 ### 2. Navbar
 - Logo "Home" integrato nei nav-links
 - Tutti i link stilizzati uniformemente con underline animato
 - Spaziatura uniforme (gap: 2rem)
-- Toggle tema (sole/luna) e switch lingua (EN)
+- Switch lingua (EN)
+- Hamburger menu posizionato a destra su mobile
+- REMOVED: Light mode toggle (dark mode only)
 
 ### 3. Sezione Competenze - Software
 - Barre di progresso animate con IntersectionObserver
@@ -63,12 +71,24 @@ Questo documento traccia tutte le modifiche apportate al portfolio durante lo sv
 - Icona SVG ufficiale aggiunta alla sezione contatti
 - URL: https://github.com/cevruz
 
+### 8. Animazioni Fixate
+- Timeline items: Rimossa opacità iniziale, visibili di default
+- Skill bars: Corretto width con CSS custom property --bar-width, threshold 0.05
+- Skill pills: Rimossa animazione, visibili di default
+- IntersectionObserver: threshold abbassato per触发 più facile
+
+### 9. Light Mode Rimosso
+- Rimosso pulsante theme-toggle dalla navbar
+- Rimossa logica JavaScript per toggle tema
+- Sito ora in dark mode only
+- Semplificato CSS rimuovendo body.light-mode rules
+
 ---
 
 ## File Modificati
 
-- `index.html` - Struttura HTML
-- `style.css` - Stili CSS
+- `index.html` - Struttura HTML (hero con 3 blob glassmorphism)
+- `style.css` - Stili CSS (glassmorphism, animazioni, gradienti, responsive)
 - `script.js` - Logica JavaScript
 
 ---
