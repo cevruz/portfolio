@@ -28,7 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
             "education.bachelor.thesis": "Sintesi tesi di laurea triennale: <em>Studio e analisi di impianti a ciclo Rankine organico (ORC)</em>.",
             "education.bachelor.exams": "<ul><li>Meccanica Applicata</li><li>Termodinamica</li><li>Scienza dei Materiali</li><li>Macchine a fluido</li><li>Tecnologie ed Impianti Meccanici</li><li>Elementi di informatica</li><li>Fisica generale</li></ul>",
             "experience.title": "Esperienze Lavorative",
-            "experience.nhp.title": "NHP S.r.l. - Junior Energy Manager / Operatore Control Room: set 2025 - oggi",
+            "experience.nhp.title": "NHP S.r.l. - Junior Energy Manager / Operatore Control Room",
+            "experience.nhp.date": "Set 2025 - Oggi",
             "experience.nhp.desc": "<li>Analisi consumi per impianti terziari e industriali;</li><li>Redazione diagnosi energetiche e audit;</li><li>Controllo e monitoraggio impianti da remoto;</li>",
             "experience.yokohama.title": "Yokohama Sekai S.r.l. - Ingegnere Ufficio Tecnico: 2021 - 2023",
             "experience.yokohama.desc": "<li>Efficientamento energetico civile (HVAC, VRV/VRF, solare termico);</li><li>Supporto tecnico in loco e da remoto;</li>",
@@ -49,12 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
             "projects.p3.long_desc": "Progetto di retrofit energetico per un edificio situato a Portici. Attraverso simulazioni dinamiche, sono stati definiti interventi sull'involucro e sugli impianti per massimizzare il risparmio energetico.",
             "projects.p4.long_desc": "Analisi dei consumi energetici dell'Aeroporto di Capodichino con proposte di efficientamento tramite l'uso di trigenerazione e integrazione di sistemi smart per la gestione dei carichi.",
             "skills.title": "Competenze",
-            "skills.technical": "Competenze Tecniche",
+            "skills.technical": "Competenze Tecniche e Settoriali",
             "skills.technical.list": "<li>• Efficienza Energetica e Sostenibilità</li><li>• Progettazione e Analisi Impianti HVAC</li><li>• Energie Rinnovabili (Fotovoltaico, Eolico, Geotermico)</li><li>• Modellazione Energetica Edifici (BEM/BIM)</li><li>• Analisi Termodinamica e Fluidodinamica</li><li>• Diagnosi Energetiche e Audit</li><li>• Gestione Progetti Energetici</li><li>• Analisi Dati</li>",
             "skills.software": "Software",
             "skills.software.list": "<li>• AutoCAD, Revit</li><li>• MATLAB</li><li>• TRNSYS, EnergyPlus, DesignBuilder</li><li>• PVSyst, PVGis</li><li>• Microsoft Office Suite (Excel, Word, PowerPoint)</li>",
             "skills.languages": "Lingue",
             "skills.languages.list": "<li>• Italiano (Madrelingua)</li><li>• Inglese (Livello B2)</li>",
+            "timeline.education": "Formazione",
+            "timeline.work": "Esperienza",
             "certifications.title": "Certificazioni",
             "certifications.toeic.desc": "Certificazione inglese internazionale. Punteggio Listening & Reading: 895/945 (B2.2 avanzato).",
             "certifications.trinity.desc": "Certificazione lingua inglese livello B2.2 con merito.",
@@ -96,7 +99,8 @@ document.addEventListener('DOMContentLoaded', () => {
             "education.bachelor.exams": "<ul><li>Applied Mechanics</li><li>Thermodynamics</li><li>Materials Science</li><li>Fluid Machines</li><li>Mechanical Technologies & Systems</li><li>Computer Science Basics</li><li>General Physics</li></ul>",
             "education.master.exams": "<ul><li>Heat Transfer</li><li>Thermofluid Dynamics of Machines</li><li>Energy Engineering</li><li>Thermal Power Plants</li><li>HVAC Systems</li><li>Advanced Energy Technologies</li><li>Combustion</li><li>Techniques & Models for Refrigeration</li><li>Energy Sustainability for Smart Transportations & Infrastructures</li><li>Experimental Methods & Environmental Impact of Machines</li></ul>",
             "experience.title": "Work Experience",
-            "experience.nhp.title": "NHP S.r.l. - Junior Energy Manager / Control Room Operator: Sep 2025 - Present",
+            "experience.nhp.title": "NHP S.r.l. - Junior Energy Manager / Control Room Operator",
+            "experience.nhp.date": "Sep 2025 - Present",
             "experience.nhp.desc": "<li>Energy consumption analysis for tertiary and industrial plants;</li><li>Drafting energy diagnoses and audits;</li><li>Remote plant control and monitoring;</li>",
             "experience.yokohama.title": "Yokohama Sekai S.r.l. - Technical Office Engineer: 2021 - 2023",
             "experience.yokohama.desc": "<li>Civil energy efficiency (HVAC, VRV/VRF, thermal solar);</li><li>Technical support on-site and remote;</li>",
@@ -117,12 +121,14 @@ document.addEventListener('DOMContentLoaded', () => {
             "projects.p3.long_desc": "Energy retrofit project for a building located in Portici. Through dynamic simulations, interventions on the envelope and systems were defined to maximize energy savings.",
             "projects.p4.long_desc": "Analysis of energy consumption at Capodichino Airport with efficiency proposals through the use of trigeneration and the integration of smart load management systems.",
             "skills.title": "Skills",
-            "skills.technical": "Technical Skills",
+            "skills.technical": "Technical & Sector Skills",
             "skills.technical.list": "<li>• Energy Efficiency & Sustainability</li><li>• HVAC System Design & Analysis</li><li>• Renewables (PV, Wind, Geothermal)</li><li>• Building Energy Modeling (BEM/BIM)</li><li>• Thermodynamics & Fluid Dynamics</li><li>• Energy Audits</li><li>• Energy Project Management</li><li>• Data Analysis</li>",
             "skills.software": "Software",
             "skills.software.list": "<li>• AutoCAD, Revit</li><li>• MATLAB</li><li>• TRNSYS, EnergyPlus, DesignBuilder</li><li>• PVSyst, PVGis</li><li>• Microsoft Office Suite</li>",
             "skills.languages": "Languages",
             "skills.languages.list": "<li>• Italian (Native)</li><li>• English (B2 Level)</li>",
+            "timeline.education": "Education",
+            "timeline.work": "Experience",
             "certifications.title": "Certifications",
             "certifications.toeic.desc": "International English certification. Listening & Reading score: 895/945 (Advanced B2.2).",
             "certifications.trinity.desc": "English certification B2.2 level with Merit.",
@@ -237,47 +243,6 @@ document.addEventListener('DOMContentLoaded', () => {
         langToggleBtn.addEventListener(evt, () => doHaptic(8), { passive: true });
     });
 
-    // Theme Toggle (Dark/Light Mode)
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const themeIconMoon = document.getElementById('theme-icon-moon');
-    const themeIconSun = document.getElementById('theme-icon-sun');
-    let isDarkMode = localStorage.getItem('theme') === 'light' ? false : true;
-
-    // Apply saved theme on page load
-    if (!isDarkMode) {
-        document.body.classList.add('light-mode');
-        themeIconMoon.style.display = 'block';  // Luna quando light mode
-        themeIconSun.style.display = 'none';
-    } else {
-        document.body.classList.remove('light-mode');
-        themeIconSun.style.display = 'block';   // Sole quando dark mode
-        themeIconMoon.style.display = 'none';
-    }
-
-    themeToggleBtn.addEventListener('click', () => {
-        doHaptic(10);
-        themeToggleBtn.classList.add('pressed');
-        setTimeout(() => themeToggleBtn.classList.remove('pressed'), 160);
-
-        isDarkMode = !isDarkMode;
-        if (isDarkMode) {
-            document.body.classList.remove('light-mode');
-            themeIconSun.style.display = 'block';   // Sole in dark mode
-            themeIconMoon.style.display = 'none';
-            localStorage.setItem('theme', 'dark');
-        } else {
-            document.body.classList.add('light-mode');
-            themeIconMoon.style.display = 'block';  // Luna in light mode
-            themeIconSun.style.display = 'none';
-            localStorage.setItem('theme', 'light');
-        }
-    });
-
-    // Also trigger haptic on theme toggle touchstart
-    ['touchstart', 'pointerdown'].forEach(evt => {
-        themeToggleBtn.addEventListener(evt, () => doHaptic(8), { passive: true });
-    });
-
 
     /* =========================================
        3. ANIMATIONS & UI (Existing)
@@ -326,6 +291,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Hero Animations
+    window.addEventListener('load', () => {
+        const heroElements = document.querySelectorAll('.hero-animate');
+        heroElements.forEach(el => {
+            el.classList.add('animate');
+        });
+    });
+
     // Scroll Reveal
     const revealOptions = {
         threshold: 0.15,
@@ -352,6 +325,40 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectCards = document.querySelectorAll('.project-card');
     projectCards.forEach((card, index) => {
         card.style.transitionDelay = `${index * 0.05}s`;
+    });
+
+    // Skill Bars Animation
+    const skillBars = document.querySelectorAll('.skill-bar-fill');
+    setTimeout(() => {
+        skillBars.forEach((bar, index) => {
+            setTimeout(() => {
+                const width = bar.getAttribute('data-width');
+                bar.style.width = width + '%';
+                bar.classList.add('visible');
+            }, index * 150);
+        });
+    }, 500);
+
+    // Timeline Animation with IntersectionObserver
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    const timelineObserverOptions = {
+        threshold: 0.05,
+        rootMargin: "0px 0px -30px 0px"
+    };
+
+    const timelineObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, index * 100);
+                timelineObserver.unobserve(entry.target);
+            }
+        });
+    }, timelineObserverOptions);
+
+    timelineItems.forEach(item => {
+        timelineObserver.observe(item);
     });
 
     // --- MODAL PROGETTI LOGIC ---
