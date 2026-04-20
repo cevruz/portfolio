@@ -4,7 +4,7 @@ A personal portfolio designed to complement my CV and enhance understanding and 
 
 ## 🌟 Release v5 — Highlights
 
-- **v5.4**: UI Polish & Heading unification. Fixed Contact Icon contrast in Light Mode and unified Header typography colors to absolute white for a cleaner look.
+- **v5.4**: Skill bars animation & readability. Fixed broken theme toggle code, improved contrast on skill bars (glow, bolder text), removed light mode (dark only).
 - **v5.3**: Interactive Contact Card with Curtain Animation. Added "Connettiamoci!" interactive button with upward sliding effect.
 - **v5.2**: UI Refinements & Contrast Fixes. Improved accessibility in Light Mode and updated footer year (2026).
 

@@ -10,8 +10,8 @@ Questo documento traccia tutte le modifiche apportate al portfolio durante lo sv
 
 | Hash | Descrizione |
 |------|-------------|
-| `x` | Remove light mode completely, fix timeline and skill bars animations |
-| `x` | Hero section glassmorphism: blob foto, nome e pulsante con animazioni fluttuanti, gradient e blend con chi-sono |
+| `541a16f` | Fix skill bars animation and readability, remove broken theme toggle code |
+| `bee2221` | Add changelog documentation |
 | `6cf3450` | Move Home into nav-links for proper spacing, center all nav elements |
 | `76c9a27` | Fix navbar spacing, add sophisticated shimmer animation to CV button |
 | `f7fc518` | Blend navbar Home button style with nav links, increase spacing |
